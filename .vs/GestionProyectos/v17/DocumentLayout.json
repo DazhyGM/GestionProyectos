@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\gestionproyectos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\gestionproyectos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "GestionProyectos\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T23:59:07.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Models\\UsuarioModel.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Models\\UsuarioModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Models\\UsuarioModel.cs",
+              "RelativeToolTip": "GestionProyectos\\Models\\UsuarioModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T23:58:33.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "GestionProyectos\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T23:58:54.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GestionProyectos.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+              "RelativeDocumentMoniker": "GestionProyectos\\GestionProyectos.csproj",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+              "RelativeToolTip": "GestionProyectos\\GestionProyectos.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-27T23:57:49.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GestionProyectos\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\MainWindow.xaml",
+              "RelativeToolTip": "GestionProyectos\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-27T23:52:29.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\MainWindow.xaml.cs",
+              "RelativeToolTip": "GestionProyectos\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T23:52:29.183Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
