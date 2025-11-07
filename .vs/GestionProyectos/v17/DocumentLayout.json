@@ -1,30 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\models\\conex\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\conex\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\gestionproyectos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\gestionproyectos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\views\\registrousuariowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\registrousuariowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\views\\registrousuariowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\registrousuariowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\views\\principalwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\principalwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\controllers\\proyectocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\controllers\\proyectocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\services\\proyectoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\services\\proyectoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\views\\principalwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\principalwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\models\\proyectomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\proyectomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\models\\estadoproyectomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\estadoproyectomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\models\\rolmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\rolmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\downloads\\gestionproyectos\\gestionproyectos\\gestionproyectos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\gestionproyectos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,76 +94,252 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PrincipalWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\PrincipalWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\PrincipalWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\PrincipalWindow.xaml.cs",
+              "RelativeToolTip": "GestionProyectos\\Views\\PrincipalWindow.xaml.cs",
+              "ViewState": "AgIAACcBAAAAAAAAAAAYwD8BAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T03:26:42.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConexionDB.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\Conex\\ConexionDB.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Models\\Conex\\ConexionDB.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\Conex\\ConexionDB.cs",
+              "RelativeToolTip": "GestionProyectos\\Models\\Conex\\ConexionDB.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAwwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T17:07:09.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "GestionProyectos\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T23:58:54.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProyectoController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Controllers\\ProyectoController.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Controllers\\ProyectoController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Controllers\\ProyectoController.cs",
+              "RelativeToolTip": "GestionProyectos\\Controllers\\ProyectoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T05:45:13.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegistroUsuarioWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\RegistroUsuarioWindow.xaml",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\RegistroUsuarioWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\RegistroUsuarioWindow.xaml",
+              "RelativeToolTip": "GestionProyectos\\Views\\RegistroUsuarioWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-06T21:07:14.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegistroUsuarioWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\RegistroUsuarioWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\RegistroUsuarioWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\RegistroUsuarioWindow.xaml.cs",
+              "RelativeToolTip": "GestionProyectos\\Views\\RegistroUsuarioWindow.xaml.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T21:11:31.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Services\\UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "GestionProyectos\\Services\\UsuarioService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Services\\UsuarioService.cs",
               "RelativeToolTip": "GestionProyectos\\Services\\UsuarioService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAYwGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T23:59:07.046Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\LoginWindow.xaml",
+              "RelativeToolTip": "GestionProyectos\\Views\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-04T03:38:31.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UsuarioModel.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Models\\UsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\UsuarioModel.cs",
               "RelativeDocumentMoniker": "GestionProyectos\\Models\\UsuarioModel.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Models\\UsuarioModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\UsuarioModel.cs",
               "RelativeToolTip": "GestionProyectos\\Models\\UsuarioModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T23:58:33.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "GestionProyectos\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "GestionProyectos\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "GestionProyectos\\Views\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwDkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T23:58:54.64Z"
+              "WhenOpened": "2025-11-04T04:16:00.479Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GestionProyectos.csproj",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
-              "RelativeDocumentMoniker": "GestionProyectos\\GestionProyectos.csproj",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
-              "RelativeToolTip": "GestionProyectos\\GestionProyectos.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-27T23:57:49.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "GestionProyectos\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\MainWindow.xaml",
-              "RelativeToolTip": "GestionProyectos\\MainWindow.xaml",
+              "DocumentIndex": 10,
+              "Title": "PrincipalWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\PrincipalWindow.xaml",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\PrincipalWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\PrincipalWindow.xaml",
+              "RelativeToolTip": "GestionProyectos\\Views\\PrincipalWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-27T23:52:29.585Z"
+              "WhenOpened": "2025-11-07T03:26:45.307Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
+              "Title": "ProyectoService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Services\\ProyectoService.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Services\\ProyectoService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Services\\ProyectoService.cs",
+              "RelativeToolTip": "GestionProyectos\\Services\\ProyectoService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAewB4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T05:44:33.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProyectoModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\ProyectoModel.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Models\\ProyectoModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\ProyectoModel.cs",
+              "RelativeToolTip": "GestionProyectos\\Models\\ProyectoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T05:43:01.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EstadoProyectoModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\EstadoProyectoModel.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Models\\EstadoProyectoModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\EstadoProyectoModel.cs",
+              "RelativeToolTip": "GestionProyectos\\Models\\EstadoProyectoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T05:45:49.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RolModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\RolModel.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Models\\RolModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Models\\RolModel.cs",
+              "RelativeToolTip": "GestionProyectos\\Models\\RolModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T04:55:19.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "GestionProyectos\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\MainWindow.xaml.cs",
-              "RelativeToolTip": "GestionProyectos\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "GestionProyectos\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T23:52:29.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "GestionProyectos\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-04T05:02:32.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\App.xaml.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\App.xaml.cs",
+              "RelativeToolTip": "GestionProyectos\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T21:03:06.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\App.xaml",
+              "RelativeDocumentMoniker": "GestionProyectos\\App.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\App.xaml",
+              "RelativeToolTip": "GestionProyectos\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-04T04:16:10.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GestionProyectos.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+              "RelativeDocumentMoniker": "GestionProyectos\\GestionProyectos.csproj",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+              "RelativeToolTip": "GestionProyectos\\GestionProyectos.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-27T23:57:49.78Z"
             }
           ]
         }

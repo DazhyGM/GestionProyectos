@@ -1,0 +1,78 @@
+﻿<Window x:Class="GestionProyectos.Views.RegistroUsuarioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registro de Usuario" 
+        Height="720" 
+        Width="618"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid Background="#F5F5F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Encabezado -->
+        <Border Grid.Row="0" Background="#2196F3">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Registro de Usuario" 
+                          FontSize="24" 
+                          FontWeight="Bold" 
+                          Foreground="White" 
+                          HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Formulario -->
+        <StackPanel Grid.Row="1" Margin="40,30,40,20">
+            <TextBlock Text="Número de Documento:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+            <TextBox x:Name="txtDocumento" Height="35" FontSize="14" Padding="8"/>
+
+            <TextBlock Text="Nombre:" FontWeight="SemiBold" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtNombre" Height="35" FontSize="14" Padding="8"/>
+
+            <TextBlock Text="Apellido:" FontWeight="SemiBold" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtApellido" Height="35" FontSize="14" Padding="8"/>
+
+            <TextBlock Text="Correo Electrónico:" FontWeight="SemiBold" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtCorreo" Height="35" FontSize="14" Padding="8"/>
+
+            <TextBlock Text="Contraseña:" FontWeight="SemiBold" Margin="0,15,0,5"/>
+            <PasswordBox x:Name="txtContrasena" Height="35" FontSize="14" Padding="8"/>
+
+            <TextBlock Text="Teléfono:" FontWeight="SemiBold" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtTelefono" Height="35" FontSize="14" Padding="8"/>
+
+            <!-- Mensaje de resultado -->
+            <Label x:Name="lblResultado" 
+                   Content="" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,15,0,0"
+                   FontWeight="SemiBold"/>
+
+            <!-- Botones -->
+            <Button x:Name="btnRegistrar" 
+                    Content="Registrarse" 
+                    Height="40" 
+                    Margin="0,20,0,0"
+                    Background="#4CAF50" 
+                    Foreground="White" 
+                    FontSize="16" 
+                    FontWeight="Bold"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="BtnRegistrar_Click"/>
+
+            <Button x:Name="btnVolver" 
+                    Content="Volver al inicio" 
+                    Height="35" 
+                    Margin="0,10,0,0"
+                    Background="Transparent" 
+                    Foreground="#2196F3" 
+                    FontSize="14"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="BtnVolver_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -2,59 +2,61 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using GestionProyectos.Models;
+using GestionProyectos.Models.Conex;
 
 namespace GestionProyectos.Services
 {
     public class UsuarioService
+     
     {
-        // 🧠 Lista temporal para simular base de datos
-        private static List<UsuarioModel> usuariosSimulados = new List<UsuarioModel>();
-
-        public string AgregarUsuario(UsuarioModel usuario)
+       private readonly ConexionDB conexion = new ConexionDB();
+         
+        public string RegistrarUsuarios(UsuarioModel usuario)
         {
+            if (usuario == null)
+                return "datos no validos";
+
+            if (string.IsNullOrWhiteSpace(usuario.Nombre))
+                return "El nombre es obligatorio.";
+
+            if (string.IsNullOrWhiteSpace(usuario.Apellido))
+                return "El apellido es obligatorio.";
+
+            if (string.IsNullOrWhiteSpace(usuario.Correo))
+                return "El correo electrónico es obligatorio.";
+
             if (!CorreoValido(usuario.Correo))
-                return "Correo electrónico inválido. No se puede registrar el usuario.";
+                return "Correo electrónico inválido. formato ejemplo@gmail.com";
 
-            if (!DocumentoValido(usuario.NumeroDocumento))
-                return "Número de documento inválido. Debe contener solo números.";
+            if (usuario.NumeroDocumento== null || usuario.NumeroDocumento <=0)
+                return "Número de documento invalido, solo deben ser numeros";
 
-            // Verificar duplicados (simulado)
-            if (usuariosSimulados.Exists(u => u.NumeroDocumento == usuario.NumeroDocumento))
-                return "Ya existe un usuario registrado con ese número de documento.";
+            if (string.IsNullOrWhiteSpace(usuario.Contrasena))
+                return "La contraseña no puede estar vacía.";
+            //para verificar si ya esta registrado
 
-            if (usuariosSimulados.Exists(u => u.Correo == usuario.Correo))
-                return "Ya existe un usuario registrado con ese correo electrónico.";
-
-            usuariosSimulados.Add(usuario);
-            return "OK";
-        }
-
-        public bool VerificarUsuario(string correo, string contrasena)
-        {
-            var usuario = usuariosSimulados.Find(u =>
-                u.Correo == correo && u.Contrasena == contrasena);
-
-            if (usuario != null)
+            if (usuario.Telefono == null || usuario.Telefono <= 0)
+                return "El número de teléfono es inválido.";
+            var usuarioExistente = conexion.GetUsuario(usuario.NumeroDocumento.Value);
+            
+            if (usuarioExistente != null && usuarioExistente.NumeroDocumento.HasValue)
             {
-                SesionUsuario.UsuarioActual = usuario;
-                Console.WriteLine($"Usuario autenticado: {usuario.Nombre}");
-                return true;
+                return "El número de documento ya está registrado.";
             }
-
-            Console.WriteLine("Usuario no encontrado.");
-            return false;
+            //
+            try
+            {
+                bool insertado = conexion.AgregarUsuarios(usuario);
+                return insertado ? "OK" : "No se pudo guardar el usuario en la base de datos.";
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error en UsuarioService: " + ex.Message);
+                return "Error al registrar el usuario. Intente nuevamente.";
+            }
         }
 
-        public List<UsuarioModel> ListarUsuarios()
-        {
-            Console.WriteLine($"Usuarios listados correctamente. Total: {usuariosSimulados.Count}");
-            return new List<UsuarioModel>(usuariosSimulados);
-        }
 
-        public UsuarioModel ObtenerUsuarioPorCorreo(string correo)
-        {
-            return usuariosSimulados.Find(u => u.Correo == correo);
-        }
 
         private bool CorreoValido(string correo)
         {
@@ -63,10 +65,38 @@ namespace GestionProyectos.Services
             return Regex.IsMatch(correo, regex);
         }
 
-        private bool DocumentoValido(string numeroDocumento)
+
+
+        public bool IniciarSesion(string correo, string contrasena)
         {
-            if (string.IsNullOrEmpty(numeroDocumento)) return false;
-            return Regex.IsMatch(numeroDocumento, @"^\d+$");
+            if (string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(contrasena))
+                return false;
+            var usuario = conexion.GetUsuarioCorreo(correo);
+            return usuario != null && usuario.Contrasena == contrasena;
+        }
+
+        public UsuarioModel ObtenerUsuarioPorCredenciales(string correo, string contrasena)
+        {
+            if (string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(contrasena))
+                return null;
+
+            try
+            {
+                var usuario = conexion.GetUsuarioCorreo(correo);
+
+                
+                if (usuario != null && usuario.Contrasena == contrasena)
+                {
+                    return usuario;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error en ObtenerUsuarioPorCredenciales: " + ex.Message);
+                return null;
+            }
         }
     }
 }

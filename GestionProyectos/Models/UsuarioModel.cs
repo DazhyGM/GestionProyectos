@@ -8,14 +8,17 @@ namespace GestionProyectos.Models
 {
     public class UsuarioModel
     {
-        private int? NumeroDocumento { get; set; }
-        private String? Nombre { get; set; }
-        private String? Apellido { get; set; }
-        private String? Correo { get; set; }
-        private String? Contrasena { get; set; }
-        private String? Telefono { get; set; }
+        public int? NumeroDocumento { get; set; }
+        public string? Nombre { get; set; }
+        public string? Apellido { get; set; }
+        public string? Correo { get; set; }
+        public string? Contrasena { get; set; }
+        public int? Telefono { get; set; }
+        public int Rol { get; set; } = 4;
+        public string NombreRol { get; set; }
 
-        public UsuarioModel(int numeroDocumento, String nombre, String apellido, String correo, String contrasena, String telefono) 
+        public UsuarioModel() { }
+        public UsuarioModel(int numeroDocumento, string nombre, string apellido, string correo, string contrasena, int telefono) 
         { 
             NumeroDocumento = numeroDocumento;
             Nombre = nombre;
