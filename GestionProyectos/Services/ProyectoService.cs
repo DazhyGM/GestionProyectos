@@ -9,7 +9,7 @@ namespace GestionProyectos.Services
     {
         private readonly ConexionDB conexion = new ConexionDB();
 
-        // Registrar un nuevo proyecto
+
         public string RegistrarProyecto(ProyectoModel proyecto)
         {
             if (proyecto == null)
@@ -25,13 +25,12 @@ namespace GestionProyectos.Services
             return insertado ? "OK" : "No se pudo registrar el proyecto.";
         }
 
-        // Obtener todos los proyectos
+
         public List<ProyectoModel> ObtenerProyectos(int numeroDocumento)
         {
             return conexion.ObtenerProyectos(numeroDocumento);
         }
 
-        // Obtener los estados disponibles para los proyectos
         public List<EstadoProyectoModel> ObtenerEstados()
         {
             return conexion.ObtenerEstadosProyecto();

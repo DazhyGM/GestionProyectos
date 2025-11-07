@@ -156,7 +156,7 @@ namespace GestionProyectos.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GestionProyectos;component/views/principalwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GestionProyectos;V1.0.0.0;component/views/principalwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\PrincipalWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

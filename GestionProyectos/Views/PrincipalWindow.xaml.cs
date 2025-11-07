@@ -29,7 +29,6 @@ namespace GestionProyectos.Views
             CargarProyectos();
         }
 
-        // ---------- Estados ----------
         private void CargarEstados()
         {
             try
@@ -61,7 +60,7 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ---------- Proyectos ----------
+
         private void CargarProyectos()
         {
             try
@@ -88,13 +87,13 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ---------- Crear ----------
+
         private void BtnCrearProyecto_Click(object sender, RoutedEventArgs e)
         {
             lblMensaje.Content = "";
             lblMensaje.Foreground = Brushes.Black;
 
-            // Validaciones
+
             if (string.IsNullOrWhiteSpace(txtNombreProyecto.Text))
             {
                 lblMensaje.Content = "El nombre del proyecto es obligatorio";
@@ -174,14 +173,14 @@ namespace GestionProyectos.Views
                 cmbEstado.SelectedIndex = 0;
         }
 
-        // ---------- Actualizar vista ----------
+
         private void BtnActualizar_Click(object sender, RoutedEventArgs e)
         {
             CargarProyectos();
             MessageBox.Show("Lista actualizada", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        // ---------- Buscar ----------
+
         private void TxtBuscar_TextChanged(object sender, TextChangedEventArgs e)
         {
             string textoBusqueda = txtBuscar.Text.ToLower();
@@ -209,7 +208,7 @@ namespace GestionProyectos.Views
             listaProyectos.ItemsSource = filtrados;
         }
 
-        // ---------- Editar ----------
+
         private void BtnEditar_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button btn && btn.Tag is int id)
@@ -295,8 +294,6 @@ namespace GestionProyectos.Views
         }
 
 
-
-        // ---------- Eliminar ----------
         private void BtnEliminar_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button btn && btn.Tag is int id)
@@ -340,7 +337,7 @@ namespace GestionProyectos.Views
         }
 
 
-        // ---------- Cerrar sesión ----------
+
         private void BtnCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
             var result = MessageBox.Show("¿Está seguro que desea cerrar sesión?",

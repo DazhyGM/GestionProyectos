@@ -33,7 +33,7 @@ namespace GestionProyectos.Services
 
             if (string.IsNullOrWhiteSpace(usuario.Contrasena))
                 return "La contraseña no puede estar vacía.";
-            //para verificar si ya esta registrado
+   
 
             if (usuario.Telefono == null || usuario.Telefono <= 0)
                 return "El número de teléfono es inválido.";
@@ -43,7 +43,7 @@ namespace GestionProyectos.Services
             {
                 return "El número de documento ya está registrado.";
             }
-            //
+        
             try
             {
                 bool insertado = conexion.AgregarUsuarios(usuario);

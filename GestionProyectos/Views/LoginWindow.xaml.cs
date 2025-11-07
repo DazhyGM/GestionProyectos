@@ -15,9 +15,7 @@ using GestionProyectos.Services;
 
 namespace GestionProyectos.Views
 {
-    /// <summary>
-    /// Lógica de interacción para LoginWindow.xaml
-    /// </summary>
+
     public partial class LoginWindow : Window
     {
         private readonly UsuarioService usuarioService = new UsuarioService();
@@ -39,26 +37,26 @@ namespace GestionProyectos.Views
             }
             try
             {
-                // Obtener el usuario con sus datos completos
+
                 var usuario = usuarioService.ObtenerUsuarioPorCredenciales(correo, contrasena);
 
                 if (usuario != null)
                 {
-                    // Login exitoso - construir nombre completo
+
                     string nombreCompleto = $"{usuario.Nombre} {usuario.Apellido}";
                     int numeroDocumento = usuario.NumeroDocumento ?? 0;
 
                     lblMensaje.Text = "Inicio de sesión exitoso";
                     lblMensaje.Foreground = Brushes.Green;
 
-                    // Abrir ventana principal pasando el nombre del usuario
+ 
                     var principalWindow = new PrincipalWindow(nombreCompleto, numeroDocumento);
                     principalWindow.Show();
                     this.Close();
                 }
                 else
                 {
-                    // Login fallido
+
                     lblMensaje.Text = "Correo o contraseña incorrectos.";
                     lblMensaje.Foreground = Brushes.Red;
                 }
@@ -78,7 +76,7 @@ namespace GestionProyectos.Views
             this.Close();
         }
 
-        // Método para ir al registro
+
         private void BtnIrRegistro_Click(object sender, RoutedEventArgs e)
         {
             var registroWindow = new RegistroUsuarioWindow();

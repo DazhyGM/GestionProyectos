@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Navbar Superior -->
+
         <Border Grid.Row="0" Background="#2196F3" BorderBrush="#1976D2" BorderThickness="0,0,0,3">
             <Grid Margin="20,0">
                 <Grid.ColumnDefinitions>
@@ -22,7 +22,7 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Logo y Título -->
+
                 <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                     <Ellipse Width="40" Height="40" Fill="White" Margin="0,0,15,0"/>
                     <TextBlock Text="Gestión de Proyectos" 
@@ -32,7 +32,7 @@
                               VerticalAlignment="Center"/>
                 </StackPanel>
 
-                <!-- Usuario y Cerrar Sesión -->
+
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
                     <Border Background="White" CornerRadius="20" Padding="15,8" Margin="0,0,15,0">
                         <StackPanel Orientation="Horizontal">
@@ -81,14 +81,14 @@
             </Grid>
         </Border>
 
-        <!-- Contenido Principal -->
+ 
         <Grid Grid.Row="1" Margin="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="350"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Panel Izquierdo - Crear Proyecto -->
+          
             <Border Grid.Column="0" 
                    Background="White" 
                    CornerRadius="10" 
@@ -233,7 +233,7 @@
                 </StackPanel>
             </Border>
 
-            <!-- Panel Derecho - Lista de Proyectos -->
+    
             <Border Grid.Column="1" 
                    Background="White" 
                    CornerRadius="10" 
@@ -250,7 +250,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <!-- Título -->
+                  
                     <TextBlock Grid.Row="0"
                               Text="Mis Proyectos" 
                               FontSize="20" 
@@ -258,7 +258,7 @@
                               Foreground="#2196F3"
                               Margin="0,0,0,15"/>
 
-                    <!-- Barra de búsqueda y filtros -->
+                 
                     <Grid Grid.Row="1" Margin="0,0,0,20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -329,7 +329,7 @@
                         </Button>
                     </Grid>
 
-                    <!-- Lista de Proyectos -->
+                
                     <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
                         <ItemsControl x:Name="listaProyectos">
                             <ItemsControl.ItemTemplate>

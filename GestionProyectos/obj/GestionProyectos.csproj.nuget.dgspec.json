@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj": {
+    "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
         "projectName": "GestionProyectos",
-        "projectPath": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Downloads\\GestionProyectos\\GestionProyectos\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

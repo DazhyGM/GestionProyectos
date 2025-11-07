@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace GestionProyectos.Views
 {
-    /// <summary>
-    /// Lógica de interacción para RegistroUsuarioWindow.xaml
-    /// </summary>
     public partial class RegistroUsuarioWindow : Window
     {
         private readonly UsuarioService usuarioService = new UsuarioService();
@@ -31,7 +28,6 @@ namespace GestionProyectos.Views
             lblResultado.Content = "";
             lblResultado.Foreground = Brushes.Black;
 
-            // Validaciones
             if (string.IsNullOrWhiteSpace(txtDocumento.Text) ||
                 string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtApellido.Text) ||

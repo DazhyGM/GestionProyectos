@@ -17,7 +17,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Encabezado -->
+
         <Border Grid.Row="0" Background="#0078D7" Height="80">
             <StackPanel VerticalAlignment="Center">
                 <TextBlock Text="Iniciar Sesión" 
@@ -28,7 +28,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Contenido -->
+
         <StackPanel Grid.Row="1" Margin="40,30,40,30">
 
             <TextBlock Text="Correo Electrónico" 
@@ -51,14 +51,14 @@
                         BorderBrush="#CCC"
                         Margin="0,0,0,20"/>
 
-            <!-- Mensaje -->
+
             <TextBlock x:Name="lblMensaje"
                        Text=""
                        TextAlignment="Center"
                        FontWeight="Bold"
                        Margin="0,0,0,15"/>
 
-            <!-- Botón Iniciar Sesión -->
+       
             <Button Content="Iniciar Sesión" 
                     Height="40"
                     Background="#0078D7"
@@ -91,7 +91,7 @@
                 </Button.Style>
             </Button>
 
-            <!-- Botón Regresar -->
+        
             <Button Content="Regresar" 
                     Height="40"
                     Background="#6C757D"
@@ -124,10 +124,10 @@
                 </Button.Style>
             </Button>
 
-            <!-- Separador -->
+    
             <Border Height="1" Background="#DDD" Margin="0,0,0,15"/>
 
-            <!-- Enlace a Registro -->
+        
             <StackPanel Orientation="Horizontal" 
                        HorizontalAlignment="Center">
                 <TextBlock Text="¿No tienes cuenta? " 

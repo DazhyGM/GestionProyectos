@@ -15,6 +15,6 @@ namespace GestionProyectos.Models
         public DateTime FechaFin { get; set; }
         public int IdEstado { get; set; }
         public string NombreEstado { get; set; }
-        public int NumeroDocumento { get; set; }  // Usuario creador del proyecto
+        public int NumeroDocumento { get; set; } 
     }
 }
