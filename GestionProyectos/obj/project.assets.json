@@ -594,23 +594,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\Estudiantes\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+      "projectUniqueName": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
       "projectName": "GestionProyectos",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\obj\\",
+      "projectPath": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+      "packagesPath": "C:\\Users\\Estudiantes\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Estudiantes\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -668,7 +668,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

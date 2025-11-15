@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2025 a las 21:07:50
+-- Servidor: 127.0.0.1:3307
+-- Tiempo de generación: 15-11-2025 a las 01:15:58
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `proyectos` (
 
 INSERT INTO `proyectos` (`id_proyecto`, `nombre`, `descripcion`, `fecha_inicio`, `fecha_fin`, `id_estado`, `numero_documento`) VALUES
 (9, 'Proyecto X', 'Proyecto de fiestuki bien sabrosuki para un fincho bien buenuki', '2025-11-14', '2025-11-17', 1, 1000619691),
-(10, 'Proyecto Pasar Escritorios', 'Lograr pasar Desarrollo en ambientes de escritorios con este proyecto sabroson', '2025-11-07', '2025-11-28', 2, 1000619691),
+(10, 'Proyecto Pasar Escritorios', 'Lograr pasar Desarrollo en ambientes de escritorios con este proyecto buenisimo', '2025-11-07', '2025-11-28', 2, 1000619691),
 (11, 'El proyecto', 'proyecto de prueba', '2025-11-07', '2025-11-08', 2, 111);
 
 -- --------------------------------------------------------
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `apellido` varchar(255) DEFAULT NULL,
   `correo` varchar(255) DEFAULT NULL,
   `contrasena` varchar(255) DEFAULT NULL,
-  `telefono` int(11) DEFAULT NULL,
+  `telefono` varchar(11) DEFAULT NULL,
   `rol` int(11) NOT NULL,
   PRIMARY KEY (`numero_documento`),
   KEY `FK_Usuarios_Roles` (`rol`)
@@ -120,10 +120,10 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`numero_documento`, `nombre`, `apellido`, `correo`, `contrasena`, `telefono`, `rol`) VALUES
-(111, 'Dav', 'Sab', 'dav@gmail.com', '123', 123, 4),
-(1000619691, 'Kevin', 'Sabogal', 'kevinsabogal24@gmail.com', '123', 123, 1),
-(1111262797, 'vane', 'medina', 'medina@gmail.com', '123', 2345, 4),
-(1112111121, 'Manuel', 'Medrano', 'manu@gmail.com', '123', 123, 4);
+(111, 'Dav', 'Sab', 'dav@gmail.com', '123', '123', 4),
+(1000619691, 'Kevin', 'Sabogal', 'kevinsabogal24@gmail.com', '123', '123', 1),
+(1111262797, 'vane', 'medina', 'medina@gmail.com', '123', '2345', 4),
+(1112111121, 'Manuel', 'Medrano', 'manu@gmail.com', '123', '123', 4);
 
 --
 -- Restricciones para tablas volcadas

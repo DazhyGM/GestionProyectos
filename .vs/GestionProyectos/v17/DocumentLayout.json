@@ -1,12 +1,109 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\estudiantes\\desktop\\gestionproyectos\\gestionproyectos\\views\\registrousuariowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\registrousuariowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\estudiantes\\desktop\\gestionproyectos\\gestionproyectos\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\estudiantes\\desktop\\gestionproyectos\\gestionproyectos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\estudiantes\\desktop\\gestionproyectos\\gestionproyectos\\models\\conex\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\conex\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\estudiantes\\desktop\\gestionproyectos\\gestionproyectos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegistroUsuarioWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Views\\RegistroUsuarioWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\RegistroUsuarioWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Views\\RegistroUsuarioWindow.xaml.cs",
+              "RelativeToolTip": "GestionProyectos\\Views\\RegistroUsuarioWindow.xaml.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAEkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T00:06:07.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "GestionProyectos\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T00:02:17.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "GestionProyectos\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T00:01:54.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Models\\UsuarioModel.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Models\\UsuarioModel.cs",
+              "ToolTip": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Models\\UsuarioModel.cs",
+              "RelativeToolTip": "GestionProyectos\\Models\\UsuarioModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T23:59:17.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConexionDB.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Models\\Conex\\ConexionDB.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Models\\Conex\\ConexionDB.cs",
+              "ToolTip": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\Models\\Conex\\ConexionDB.cs",
+              "RelativeToolTip": "GestionProyectos\\Models\\Conex\\ConexionDB.cs",
+              "ViewState": "AgIAACgBAAAAAAAAAAAAADcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T23:27:52.02Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

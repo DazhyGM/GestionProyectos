@@ -13,12 +13,12 @@ namespace GestionProyectos.Models
         public string? Apellido { get; set; }
         public string? Correo { get; set; }
         public string? Contrasena { get; set; }
-        public int? Telefono { get; set; }
+        public string? Telefono { get; set; }
         public int Rol { get; set; } = 4;
         public string NombreRol { get; set; }
 
         public UsuarioModel() { }
-        public UsuarioModel(int numeroDocumento, string nombre, string apellido, string correo, string contrasena, int telefono) 
+        public UsuarioModel(int numeroDocumento, string nombre, string apellido, string correo, string contrasena, string telefono) 
         { 
             NumeroDocumento = numeroDocumento;
             Nombre = nombre;

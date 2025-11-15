@@ -33,9 +33,9 @@ namespace GestionProyectos.Services
 
             if (string.IsNullOrWhiteSpace(usuario.Contrasena))
                 return "La contraseña no puede estar vacía.";
-   
 
-            if (usuario.Telefono == null || usuario.Telefono <= 0)
+
+            if (string.IsNullOrWhiteSpace(usuario.Telefono))
                 return "El número de teléfono es inválido.";
             var usuarioExistente = conexion.GetUsuario(usuario.NumeroDocumento.Value);
             

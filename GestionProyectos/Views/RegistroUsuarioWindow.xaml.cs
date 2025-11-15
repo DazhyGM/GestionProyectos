@@ -47,12 +47,6 @@ namespace GestionProyectos.Views
                 return;
             }
 
-            if (!int.TryParse(txtTelefono.Text.Trim(), out int telefono) || telefono <= 0)
-            {
-                lblResultado.Content = "El teléfono debe ser un valor numérico válido.";
-                lblResultado.Foreground = Brushes.Red;
-                return;
-            }
 
             var usuario = new UsuarioModel
             {
@@ -61,7 +55,7 @@ namespace GestionProyectos.Views
                 Apellido = txtApellido.Text.Trim(),
                 Correo = txtCorreo.Text.Trim(),
                 Contrasena = txtContrasena.Password,
-                Telefono = telefono
+                Telefono = txtTelefono.Text.Trim()
             };
 
             try

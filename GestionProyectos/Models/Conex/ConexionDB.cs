@@ -12,7 +12,7 @@ namespace GestionProyectos.Models.Conex
 {
     public class ConexionDB
     {
-        string stringConex = "server= localhost; user=root; database=gestion_proyectos; password=; port=3306;";
+        string stringConex = "server= localhost; user=root; database=gestion_proyectos; password=; port=3307;";
         public UsuarioModel GetUsuario(int documento)
         {
             UsuarioModel usuario = new UsuarioModel();
@@ -35,7 +35,7 @@ namespace GestionProyectos.Models.Conex
                             usuario.Apellido = reader.GetString("apellido");
                             usuario.Correo = reader.GetString("correo");
                             usuario.Contrasena = reader.GetString("contrasena");
-                            usuario.Telefono = reader.GetInt32("telefono");
+                            usuario.Telefono = reader.GetString("telefono");
                             usuario.NombreRol = reader.GetString("nombre_rol");
                         }
                         else {
@@ -104,7 +104,7 @@ namespace GestionProyectos.Models.Conex
                             Apellido = reader.GetString("apellido"),
                             Correo = reader.GetString("correo"),
                             Contrasena = reader.GetString("contrasena"),
-                            Telefono = reader.GetInt32("telefono"),
+                            Telefono = reader.GetString("telefono"),
                             Rol = reader.GetInt32("rol"),
                             };
                            
@@ -168,7 +168,7 @@ namespace GestionProyectos.Models.Conex
                                 Apellido = reader.GetString("apellido"),
                                 Correo = reader.GetString("correo"),
                                 Contrasena = reader.GetString("contrasena"),
-                                Telefono = reader.GetInt32("telefono"),
+                                Telefono = reader.GetString("telefono"),
                                 Rol = reader.GetInt32("id_rol"),
                                 NombreRol = reader.GetString("nombre_rol")
                             });
