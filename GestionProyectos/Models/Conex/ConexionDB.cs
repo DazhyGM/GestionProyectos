@@ -12,7 +12,7 @@ namespace GestionProyectos.Models.Conex
 {
     public class ConexionDB
     {
-        string stringConex = "server= localhost; user=root; database=gestion_proyectos; password=; port=3307;";
+        string stringConex = "server= localhost; user=root; database=gestion_proyectos; password=; port=3306;";
         public UsuarioModel GetUsuario(int documento)
         {
             UsuarioModel usuario = new UsuarioModel();
@@ -205,43 +205,50 @@ namespace GestionProyectos.Models.Conex
         public List<ProyectoModel> ObtenerProyectos(int numeroDocumento)
         {
             List<ProyectoModel> proyectos = new List<ProyectoModel>();
+
             string query = @"SELECT p.id_proyecto, p.nombre, p.descripcion, p.fecha_inicio, p.fecha_fin, 
-                            p.id_estado, e.nombre_estado, p.numero_documento
-                     FROM proyectos p
-                     INNER JOIN estados_proyecto e ON p.id_estado = e.id_estado
-                        WHERE p.numero_documento = @numeroDocumento
-                        AND p.id_estado <> 4
-                     ORDER BY p.id_proyecto DESC";
+                        p.id_estado, e.nombre_estado, p.numero_documento,
+                        COALESCE(
+                            ROUND(
+                                (SUM(CASE WHEN t.completada = 1 THEN 1 ELSE 0 END) / COUNT(t.id_tarea)) * 100
+                            ), 0
+                        ) AS progreso
+                 FROM proyectos p
+                 INNER JOIN estados_proyecto e ON p.id_estado = e.id_estado
+                 LEFT JOIN tareas t ON p.id_proyecto = t.id_proyecto
+                 WHERE p.numero_documento = @numeroDocumento
+                   AND p.id_estado <> 4
+                 GROUP BY p.id_proyecto, p.nombre, p.descripcion, p.fecha_inicio, p.fecha_fin, 
+                          p.id_estado, e.nombre_estado, p.numero_documento
+                 ORDER BY p.id_proyecto DESC";
 
             using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
             {
                 using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
                 {
                     command.Parameters.AddWithValue("@numeroDocumento", numeroDocumento);
+                    mySqlConnection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        mySqlConnection.Open();
-                        using (MySqlDataReader reader = command.ExecuteReader())
+                        while (reader.Read())
                         {
-                            while (reader.Read())
+                            proyectos.Add(new ProyectoModel
                             {
-                                proyectos.Add(new ProyectoModel
-                                {
-                                    IdProyecto = reader.GetInt32("id_proyecto"),
-                                    Nombre = reader.GetString("nombre"),
-                                    Descripcion = reader.GetString("descripcion"),
-                                    FechaInicio = reader.GetDateTime("fecha_inicio"),
-                                    FechaFin = reader.GetDateTime("fecha_fin"),
-                                    IdEstado = reader.GetInt32("id_estado"),
-                                    NombreEstado = reader.GetString("nombre_estado"),
-                                    NumeroDocumento = reader.GetInt32("numero_documento")
-                                });
-                            }
+                                IdProyecto = reader.GetInt32("id_proyecto"),
+                                Nombre = reader.GetString("nombre"),
+                                Descripcion = reader.GetString("descripcion"),
+                                FechaInicio = reader.GetDateTime("fecha_inicio"),
+                                FechaFin = reader.GetDateTime("fecha_fin"),
+                                IdEstado = reader.GetInt32("id_estado"),
+                                NombreEstado = reader.GetString("nombre_estado"),
+                                NumeroDocumento = reader.GetInt32("numero_documento"),
+                                Progreso = reader.GetInt32("progreso")
+                            });
                         }
                     }
                 }
-
-                return proyectos;
             }
+            return proyectos;       
         }
 
         public List<EstadoProyectoModel> ObtenerEstadosProyecto()
@@ -304,6 +311,153 @@ namespace GestionProyectos.Models.Conex
             }
         }
 
+        public bool ActualizarEstadoProyecto(int idProyecto, int idNuevoEstado)
+        {
+            string query = "UPDATE proyectos SET id_estado = @estado WHERE id_proyecto = @id";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    command.Parameters.AddWithValue("@estado", idNuevoEstado);
+                    command.Parameters.AddWithValue("@id", idProyecto);
+
+                    mySqlConnection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+
+        public List<TareaModel> ObtenerTareas(int idProyecto)
+        {
+            List<TareaModel> tareas = new List<TareaModel>();
+            string query = "SELECT id_tarea, id_proyecto, nombre_tarea, encargado, completada FROM tareas WHERE id_proyecto = @idProyecto";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    command.Parameters.AddWithValue("@idProyecto", idProyecto);
+                    mySqlConnection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            tareas.Add(new TareaModel
+                            {
+                                IdTarea = reader.GetInt32("id_tarea"),
+                                IdProyecto = reader.GetInt32("id_proyecto"),
+                                NombreTarea = reader.GetString("nombre_tarea"),
+                                Encargado = reader.GetString("encargado"),
+                                Completada = reader.GetBoolean("completada")
+                            });
+                        }
+                    }
+                }
+            }
+            return tareas;
+        }
+
+        public bool AgregarTarea(TareaModel tarea)
+        {
+            string query = "INSERT INTO tareas (id_proyecto, nombre_tarea, encargado, completada) VALUES (@id, @nombre, @encargado, @completada)";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    command.Parameters.AddWithValue("@id", tarea.IdProyecto);
+                    command.Parameters.AddWithValue("@nombre", tarea.NombreTarea);
+                    command.Parameters.AddWithValue("@encargado", tarea.Encargado);
+                    command.Parameters.AddWithValue("@completada", tarea.Completada);
+
+                    mySqlConnection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+
+        public bool ActualizarEstadoTarea(int idTarea, bool completada)
+        {
+            string query = "UPDATE tareas SET completada = @completada WHERE id_tarea = @id";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    command.Parameters.AddWithValue("@completada", completada);
+                    command.Parameters.AddWithValue("@id", idTarea);
+
+                    mySqlConnection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+
+        public List<ProyectoModel> ObtenerPInactivos(int numeroDocumento)
+        {
+            List<ProyectoModel> proyectos = new List<ProyectoModel>();
+            string query = @"SELECT id_proyecto, nombre, descripcion, fecha_inicio, fecha_fin, 
+                            id_estado, numero_documento
+                     FROM proyectos
+                        WHERE id_estado = 4 AND numero_documento = @numeroDocumento";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    command.Parameters.AddWithValue("@numeroDocumento", numeroDocumento);
+                    {
+                        mySqlConnection.Open();
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                proyectos.Add(new ProyectoModel
+                                {
+                                    IdProyecto = reader.GetInt32("id_proyecto"),
+                                    Nombre = reader.GetString("nombre"),
+                                    Descripcion = reader.GetString("descripcion"),
+                                    FechaInicio = reader.GetDateTime("fecha_inicio"),
+                                    FechaFin = reader.GetDateTime("fecha_fin"),
+                                    IdEstado = reader.GetInt32("id_estado"),
+                                    NumeroDocumento = reader.GetInt32("numero_documento")
+                                });
+                            }
+                        }
+                    }
+                }
+
+                return proyectos;
+            }
+        }
+
+        public string ActivarProyecto(ProyectoModel proyecto)
+        {
+            try
+            {
+                using (var connection = new MySqlConnection(stringConex))
+                {
+                    connection.Open();
+                    string query = @"UPDATE proyectos SET Id_Estado = 1 WHERE Id_Proyecto = @Id_Proyecto";
+
+                    using (var cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@id_proyecto", proyecto.IdProyecto);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+
+        }
 
     }
 

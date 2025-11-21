@@ -76,7 +76,8 @@ namespace GestionProyectos.Views
                     Descripcion = p.Descripcion ?? "",
                     FechaInicio = p.FechaInicio,
                     FechaFin = p.FechaFin,
-                    Estado = p.NombreEstado ?? (p.IdEstado.ToString())
+                    Estado = p.NombreEstado ?? (p.IdEstado.ToString()),
+                    Progreso = p.Progreso
                 }).OrderByDescending(x => x.Id).ToList();
 
                 listaProyectos.ItemsSource = listaParaMostrar;
@@ -202,7 +203,8 @@ namespace GestionProyectos.Views
                 Descripcion = p.Descripcion,
                 FechaInicio = p.FechaInicio,
                 FechaFin = p.FechaFin,
-                Estado = p.NombreEstado
+                Estado = p.NombreEstado,
+                Progreso = p.Progreso
             }).OrderByDescending(x => x.Id).ToList();
 
             listaProyectos.ItemsSource = filtrados;
@@ -351,6 +353,68 @@ namespace GestionProyectos.Views
                 loginWindow.Show();
                 this.Close();
             }
+        }
+
+        private void BtnTareas_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.Tag is int idProyecto)
+            {
+                var proyecto = proyectos.FirstOrDefault(p => p.IdProyecto == idProyecto);
+                if (proyecto != null)
+                {
+                    var tareasWindow = new GestionTareasWindow(idProyecto, proyecto.Nombre);
+
+                    tareasWindow.Closed += (s, args) =>
+                    {
+                        CargarProyectos();
+
+                        var proyActualizado = proyectos.FirstOrDefault(p => p.IdProyecto == idProyecto);
+
+                        if (proyActualizado != null)
+                        {
+                            int idEstadoPendiente = 1;   
+                            int idEstadoEnCurso = 2;     
+                            int idEstadoFinalizado = 3;  
+
+                            int nuevoEstado = proyActualizado.IdEstado;
+
+           
+                            if (proyActualizado.Progreso == 100)
+                            {
+                                if (proyActualizado.IdEstado != idEstadoFinalizado)
+                                    nuevoEstado = idEstadoFinalizado;
+                            }
+                            else if (proyActualizado.Progreso > 0 && proyActualizado.Progreso < 100)
+                            {
+                                if (proyActualizado.IdEstado != idEstadoEnCurso)
+                                    nuevoEstado = idEstadoEnCurso;
+                            }
+                            else if (proyActualizado.Progreso == 0)
+                            {
+                                if (proyActualizado.IdEstado != idEstadoPendiente && proyActualizado.IdEstado != 4)
+                                    nuevoEstado = idEstadoPendiente;
+                            }
+
+                            if (nuevoEstado != proyActualizado.IdEstado)
+                            {
+                                proyectoController.ActualizarEstado(idProyecto, nuevoEstado);
+
+                                CargarProyectos();
+                            }
+                        }
+                    };
+
+                    tareasWindow.ShowDialog();
+                }
+            }
+        }
+
+        private void BtnProyectosInactivos_Click(object sender, RoutedEventArgs e)
+        {
+            ProyectosInactivosWindow proyectos = new ProyectosInactivosWindow(usuarioActual, numeroDocumentoUsuario);
+            proyectos.Show();
+            this.Close();
+
         }
     }
 }

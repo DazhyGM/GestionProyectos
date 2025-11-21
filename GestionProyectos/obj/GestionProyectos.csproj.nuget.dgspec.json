@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj": {
+    "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
         "projectName": "GestionProyectos",
-        "projectPath": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
-        "packagesPath": "C:\\Users\\Estudiantes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Estudiantes\\Desktop\\GestionProyectos\\GestionProyectos\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Estudiantes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

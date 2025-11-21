@@ -39,6 +39,20 @@ namespace GestionProyectos.Services
         {
             return conexion.ActualizarProyecto(proyecto);
         }
+        public bool CambiarEstado(int idProyecto, int idNuevoEstado)
+        {
+            return conexion.ActualizarEstadoProyecto(idProyecto, idNuevoEstado);
+        }
+
+        public List<ProyectoModel> ObtenerPInactivos(int numeroDocumento)
+        {
+            return conexion.ObtenerPInactivos(numeroDocumento);
+        }
+
+        public string ActivarProyecto(ProyectoModel proyecto)
+        {
+            return conexion.ActivarProyecto(proyecto);
+        }
 
     }
 }

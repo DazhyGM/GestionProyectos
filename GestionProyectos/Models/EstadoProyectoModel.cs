@@ -9,6 +9,6 @@ namespace GestionProyectos.Models
     public class EstadoProyectoModel
     {
         public int IdEstado { get; set; }
-        public string NombreEstado { get; set; }
+        public string? NombreEstado { get; set; }
     }
 }
