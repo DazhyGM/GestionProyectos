@@ -20,11 +20,15 @@ namespace GestionProyectos.Services
 
         public string AgregarTarea(TareaModel tarea)
         {
-            if (string.IsNullOrWhiteSpace(tarea.NombreTarea)) return "El nombre es obligatorio";
-            if (string.IsNullOrWhiteSpace(tarea.Encargado)) return "El encargado es obligatorio";
+            if (string.IsNullOrWhiteSpace(tarea.NombreTarea))
+                return "El nombre es obligatorio";
+
+            if (tarea.EncargadoId == null)
+                return "Debe seleccionar un encargado";
 
             return conexion.AgregarTarea(tarea) ? "OK" : "Error al guardar";
         }
+
 
         public bool CambiarEstadoTarea(int idTarea, bool completada)
         {

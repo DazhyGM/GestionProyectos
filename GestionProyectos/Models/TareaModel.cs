@@ -10,8 +10,11 @@ namespace GestionProyectos.Models
     {
         public int IdTarea { get; set; }
         public int IdProyecto { get; set; }
+
         public string NombreTarea { get; set; }
-        public string Encargado { get; set; }
+
+        public int? EncargadoId { get; set; }
+
         public bool Completada { get; set; }
     }
 }

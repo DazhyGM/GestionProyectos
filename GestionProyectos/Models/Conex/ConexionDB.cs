@@ -179,6 +179,104 @@ namespace GestionProyectos.Models.Conex
             return usuarios;
         }
 
+        public List<UsuarioModel> ObtenerColaboradores()
+        {
+            List<UsuarioModel> colaboradores = new List<UsuarioModel>();
+            string query = @"SELECT numero_documento, nombre, apellido 
+                             FROM usuarios 
+                             WHERE id_rol = 4";
+
+            using (MySqlConnection connection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            colaboradores.Add(new UsuarioModel
+                            {
+                                NumeroDocumento = reader.GetInt32("numero_documento"),
+                                Nombre = reader.GetString("nombre"),
+                                Apellido = reader.GetString("apellido")
+                            });
+                        }
+                    }
+                }
+            }
+            return colaboradores;
+        }
+
+        public bool CompartirProyecto(int idProyecto, int numeroDocumento)
+        {
+            string query = @"INSERT INTO proyectos_usuarios (id_proyecto, numero_documento)
+                             VALUES (@idProyecto, @numeroDocumento)";
+
+            using (var connection = new MySqlConnection(stringConex))
+            {
+                using (var cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@idProyecto", idProyecto);
+                    cmd.Parameters.AddWithValue("@numeroDocumento", numeroDocumento);
+
+                    connection.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public List<UsuarioModel> ObtenerUsuariosProyecto(int idProyecto)
+        {
+            List<UsuarioModel> lista = new List<UsuarioModel>();
+
+            string query = @"SELECT u.numero_documento, u.nombre, u.apellido
+                             FROM proyectos_usuarios pu
+                             INNER JOIN usuarios u ON pu.numero_documento = u.numero_documento
+                             WHERE pu.id_proyecto = @idProyecto";
+
+            using (var con = new MySqlConnection(stringConex))
+            {
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@idProyecto", idProyecto);
+                    con.Open();
+                    using (var r = cmd.ExecuteReader())
+                    {
+                        while (r.Read())
+                        {
+                            lista.Add(new UsuarioModel
+                            {
+                                NumeroDocumento = r.GetInt32("numero_documento"),
+                                Nombre = r.GetString("nombre"),
+                                Apellido = r.GetString("apellido")
+                            });
+                        }
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+        public bool EliminarUsuarioCompartido(int idProyecto, int numeroDocumento)
+        {
+            string query = @"DELETE FROM proyectos_usuarios
+                             WHERE id_proyecto = @idProyecto AND numero_documento = @numeroDocumento";
+
+            using (var con = new MySqlConnection(stringConex))
+            {
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@idProyecto", idProyecto);
+                    cmd.Parameters.AddWithValue("@numeroDocumento", numeroDocumento);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
         public bool AgregarProyecto(ProyectoModel proyecto)
         {
             string query = @"INSERT INTO proyectos (nombre, descripcion, fecha_inicio, fecha_fin, id_estado, numero_documento)
@@ -206,29 +304,32 @@ namespace GestionProyectos.Models.Conex
         {
             List<ProyectoModel> proyectos = new List<ProyectoModel>();
 
-            string query = @"SELECT p.id_proyecto, p.nombre, p.descripcion, p.fecha_inicio, p.fecha_fin, 
+            string query = @"
+        SELECT DISTINCT p.id_proyecto, p.nombre, p.descripcion, p.fecha_inicio, p.fecha_fin, 
                         p.id_estado, e.nombre_estado, p.numero_documento,
                         COALESCE(
                             ROUND(
                                 (SUM(CASE WHEN t.completada = 1 THEN 1 ELSE 0 END) / COUNT(t.id_tarea)) * 100
                             ), 0
                         ) AS progreso
-                 FROM proyectos p
-                 INNER JOIN estados_proyecto e ON p.id_estado = e.id_estado
-                 LEFT JOIN tareas t ON p.id_proyecto = t.id_proyecto
-                 WHERE p.numero_documento = @numeroDocumento
-                   AND p.id_estado <> 4
-                 GROUP BY p.id_proyecto, p.nombre, p.descripcion, p.fecha_inicio, p.fecha_fin, 
-                          p.id_estado, e.nombre_estado, p.numero_documento
-                 ORDER BY p.id_proyecto DESC";
+        FROM proyectos p
+        INNER JOIN estados_proyecto e ON p.id_estado = e.id_estado
+        LEFT JOIN tareas t ON p.id_proyecto = t.id_proyecto
+        LEFT JOIN proyectos_usuarios pu ON p.id_proyecto = pu.id_proyecto
+        WHERE (p.numero_documento = @numeroDocumento OR pu.numero_documento = @numeroDocumento)
+          AND p.id_estado <> 4
+        GROUP BY p.id_proyecto, p.nombre, p.descripcion, p.fecha_inicio, p.fecha_fin, 
+                 p.id_estado, e.nombre_estado, p.numero_documento
+        ORDER BY p.id_proyecto DESC;
+    ";
 
-            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            using (var mySqlConnection = new MySqlConnection(stringConex))
             {
-                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                using (var command = new MySqlCommand(query, mySqlConnection))
                 {
                     command.Parameters.AddWithValue("@numeroDocumento", numeroDocumento);
                     mySqlConnection.Open();
-                    using (MySqlDataReader reader = command.ExecuteReader())
+                    using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
@@ -248,8 +349,9 @@ namespace GestionProyectos.Models.Conex
                     }
                 }
             }
-            return proyectos;       
+            return proyectos;
         }
+
 
         public List<EstadoProyectoModel> ObtenerEstadosProyecto()
         {
@@ -332,7 +434,9 @@ namespace GestionProyectos.Models.Conex
         public List<TareaModel> ObtenerTareas(int idProyecto)
         {
             List<TareaModel> tareas = new List<TareaModel>();
-            string query = "SELECT id_tarea, id_proyecto, nombre_tarea, encargado, completada FROM tareas WHERE id_proyecto = @idProyecto";
+            string query = @"SELECT id_tarea, id_proyecto, nombre_tarea, encargado_id, completada
+                     FROM tareas 
+                     WHERE id_proyecto = @idProyecto";
 
             using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
             {
@@ -340,6 +444,7 @@ namespace GestionProyectos.Models.Conex
                 {
                     command.Parameters.AddWithValue("@idProyecto", idProyecto);
                     mySqlConnection.Open();
+
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -349,7 +454,7 @@ namespace GestionProyectos.Models.Conex
                                 IdTarea = reader.GetInt32("id_tarea"),
                                 IdProyecto = reader.GetInt32("id_proyecto"),
                                 NombreTarea = reader.GetString("nombre_tarea"),
-                                Encargado = reader.GetString("encargado"),
+                                EncargadoId = reader.GetInt32("encargado_id"),
                                 Completada = reader.GetBoolean("completada")
                             });
                         }
@@ -359,18 +464,19 @@ namespace GestionProyectos.Models.Conex
             return tareas;
         }
 
+
         public bool AgregarTarea(TareaModel tarea)
         {
-            string query = "INSERT INTO tareas (id_proyecto, nombre_tarea, encargado, completada) VALUES (@id, @nombre, @encargado, @completada)";
+            string query = @"INSERT INTO tareas (id_proyecto, nombre_tarea, completada, encargado_id)
+                     VALUES (@idProyecto, @nombreTarea, 0, @encargadoId)";
 
             using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
             {
                 using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
                 {
-                    command.Parameters.AddWithValue("@id", tarea.IdProyecto);
-                    command.Parameters.AddWithValue("@nombre", tarea.NombreTarea);
-                    command.Parameters.AddWithValue("@encargado", tarea.Encargado);
-                    command.Parameters.AddWithValue("@completada", tarea.Completada);
+                    command.Parameters.AddWithValue("@idProyecto", tarea.IdProyecto);
+                    command.Parameters.AddWithValue("@nombreTarea", tarea.NombreTarea);
+                    command.Parameters.AddWithValue("@encargadoId", tarea.EncargadoId);
 
                     mySqlConnection.Open();
                     int result = command.ExecuteNonQuery();
@@ -378,6 +484,7 @@ namespace GestionProyectos.Models.Conex
                 }
             }
         }
+
 
         public bool ActualizarEstadoTarea(int idTarea, bool completada)
         {
@@ -458,6 +565,93 @@ namespace GestionProyectos.Models.Conex
             }
 
         }
+
+        public List<UsuarioModel> BuscarColaboradores(string filtro)
+        {
+            List<UsuarioModel> lista = new List<UsuarioModel>();
+
+            try
+            {
+                using (var connection = new MySqlConnection(stringConex))
+                {
+                    connection.Open();
+
+                    string sql = @"
+                SELECT numero_documento, nombre, apellido, correo, telefono, rol
+                FROM usuarios
+                WHERE rol = 4
+                AND (
+                        numero_documento LIKE @filtro
+                     OR nombre LIKE @filtro
+                     OR apellido LIKE @filtro
+                    )
+                LIMIT 10;
+            ";
+
+                    using (var cmd = new MySqlCommand(sql, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@filtro", "%" + filtro + "%");
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                lista.Add(new UsuarioModel
+                                {
+                                    NumeroDocumento = reader["numero_documento"] as int?,
+                                    Nombre = reader["nombre"].ToString(),
+                                    Apellido = reader["apellido"].ToString(),
+                                    Correo = reader["correo"].ToString(),
+                                    Telefono = reader["telefono"].ToString(),
+                                    Rol = Convert.ToInt32(reader["rol"])
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error en BuscarColaboradores: " + ex.Message);
+            }
+
+            return lista;
+        }
+
+        public List<UsuarioModel> ObtenerUsuariosPorRol(int rol)
+        {
+            List<UsuarioModel> lista = new List<UsuarioModel>();
+
+            string query = @"SELECT numero_documento, nombre, apellido, correo, telefono, id_rol
+                     FROM usuarios
+                     WHERE id_rol = @rol";
+
+            using (var conn = new MySqlConnection(stringConex))
+            using (var cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@rol", rol);
+                conn.Open();
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lista.Add(new UsuarioModel
+                        {
+                            NumeroDocumento = reader.GetInt32("numero_documento"),
+                            Nombre = reader.GetString("nombre"),
+                            Apellido = reader.GetString("apellido"),
+                            Correo = reader.GetString("correo"),
+                            Telefono = reader.GetString("telefono"),
+                            Rol = reader.GetInt32("id_rol")
+                        });
+                    }
+                }
+            }
+
+            return lista;
+        }
+
 
     }
 

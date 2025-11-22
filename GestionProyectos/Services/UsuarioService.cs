@@ -98,5 +98,45 @@ namespace GestionProyectos.Services
                 return null;
             }
         }
+
+        // -----------------------------------------------------------
+        // OBTENER USUARIOS POR ROL → Para cargar colaboradores
+        // -----------------------------------------------------------
+        public List<UsuarioModel> ObtenerUsuariosPorRol(int rol)
+        {
+            try
+            {
+                return conexion.ObtenerUsuariosPorRol(rol);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error en ObtenerUsuariosPorRol: " + ex.Message);
+                return new List<UsuarioModel>();
+            }
+        }
+
+        // -----------------------------------------------------------
+        // BUSCAR COLABORADORES POR FILTRO (documento, nombre, apellido)
+        // -----------------------------------------------------------
+        public List<UsuarioModel> ObtenerColaboradores(string filtro)
+        {
+            try
+            {
+                return conexion.BuscarColaboradores(filtro);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error en ObtenerColaboradores: " + ex.Message);
+                return new List<UsuarioModel>();
+            }
+        }
+
+        // Obtener todos los colaboradores sin filtro
+        public List<UsuarioModel> ObtenerColaboradores()
+        {
+            // 4 = ROL COLABORADOR
+            return ObtenerUsuariosPorRol(4);
+        }
+
     }
 }
