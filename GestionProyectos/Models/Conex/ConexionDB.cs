@@ -142,7 +142,6 @@ namespace GestionProyectos.Models.Conex
             return roles;
         }
 
-        // NUEVO: Método para obtener todos los usuarios
         public List<UsuarioModel> ObtenerUsuarios()
         {
             List<UsuarioModel> usuarios = new List<UsuarioModel>();
@@ -351,7 +350,6 @@ namespace GestionProyectos.Models.Conex
             }
             return proyectos;
         }
-
 
         public List<EstadoProyectoModel> ObtenerEstadosProyecto()
         {

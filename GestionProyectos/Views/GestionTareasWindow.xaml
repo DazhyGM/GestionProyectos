@@ -13,14 +13,14 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- TÍTULO -->
+
         <TextBlock Text="Tareas del Proyecto" 
                    FontSize="20" 
                    FontWeight="Bold" 
                    Foreground="#2196F3" 
                    Margin="0,0,0,20"/>
 
-        <!-- FORMULARIO AGREGAR TAREA -->
+
         <Border Grid.Row="1" Background="#F5F5F5" Padding="15" CornerRadius="5" Margin="0,0,0,20">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -34,7 +34,7 @@
                     <TextBox x:Name="txtNombreTarea" Height="30" Padding="5"/>
                 </StackPanel>
 
-                <!-- Encargado -->
+
                 <StackPanel Grid.Column="1" Margin="10">
                     <TextBlock Text="Encargado del Proyecto" FontWeight="Bold"/>
 
@@ -63,7 +63,7 @@
             </Grid>
         </Border>
 
-        <!-- LISTA DE TAREAS -->
+
         <ScrollViewer Grid.Row="2">
             <ItemsControl x:Name="listaTareas">
                 <ItemsControl.ItemTemplate>
@@ -117,7 +117,7 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <!-- SECCIÓN COLABORADORES -->
+
         <Border Grid.Row="3" Background="#EEEEEE" Padding="15" CornerRadius="5" Margin="0,20,0,0">
             <StackPanel>
 
@@ -127,7 +127,7 @@
                            Foreground="#3F51B5"
                            Margin="0 0 0 15"/>
 
-                <!-- BUSCAR COLABORADOR -->
+
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
 
                     <Grid Width="250" Height="28">
@@ -150,7 +150,7 @@
                             Click="BtnBuscarColaborador_Click"/>
                 </StackPanel>
 
-                <!-- LISTA DE COLABORADORES DISPONIBLES -->
+
                 <ListView x:Name="lstColaboradoresDisponibles"
                           Height="120"
                           Margin="0 0 0 10">

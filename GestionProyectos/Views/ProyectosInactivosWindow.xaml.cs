@@ -17,9 +17,7 @@ using System.Xml.Linq;
 
 namespace GestionProyectos.Views
 {
-    /// <summary>
-    /// Lógica de interacción para ProyectosInactivosWindow.xaml
-    /// </summary>
+
     public partial class ProyectosInactivosWindow : Window
     {
 

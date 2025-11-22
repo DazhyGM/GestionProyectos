@@ -33,9 +33,6 @@ namespace GestionProyectos.Views
             CargarColaboradoresProyecto();
         }
 
-        // ============================================================
-        // 1. Cargar colaboradores (rol 4)
-        // ============================================================
         private void CargarColaboradores()
         {
             try
@@ -49,9 +46,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 2. Cargar tareas del proyecto
-        // ============================================================
         private void CargarTareas()
         {
             try
@@ -65,9 +59,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 3. Cargar colaboradores ya agregados al proyecto
-        // ============================================================
         private void CargarColaboradoresProyecto()
         {
             try
@@ -82,9 +73,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 4. Agregar tarea
-        // ============================================================
         private void BtnAgregarTarea_Click(object sender, RoutedEventArgs e)
         {
             string nombreTarea = txtNombreTarea.Text.Trim();
@@ -129,9 +117,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 5. Cambiar estado de la tarea
-        // ============================================================
         private void CheckBox_CheckChanged(object sender, RoutedEventArgs e)
         {
             try
@@ -152,9 +137,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 6. Autocompletar encargado (buscador)
-        // ============================================================
         private void txtDocumentoEncargado_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
@@ -207,9 +189,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 7. Buscar colaborador (sección proyecto)
-        // ============================================================
         private void BtnBuscarColaborador_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -224,9 +203,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 8. Agregar colaborador al proyecto
-        // ============================================================
         private void BtnAgregarColaborador_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -263,9 +239,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 9. Eliminar colaborador del proyecto
-        // ============================================================
         private void BtnEliminarColaborador_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -311,9 +284,6 @@ namespace GestionProyectos.Views
             }
         }
 
-        // ============================================================
-        // 10. Placeholder del buscador
-        // ============================================================
         private void TxtBuscarColaborador_TextChanged(object sender, TextChangedEventArgs e)
         {
             PlaceholderBuscar.Visibility =
@@ -322,9 +292,6 @@ namespace GestionProyectos.Views
                 : Visibility.Collapsed;
         }
 
-        // ============================================================
-        // 11. Limpiar campos
-        // ============================================================
         private void LimpiarCampos()
         {
             txtNombreTarea.Text = "";

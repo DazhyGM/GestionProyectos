@@ -99,9 +99,6 @@ namespace GestionProyectos.Services
             }
         }
 
-        // -----------------------------------------------------------
-        // OBTENER USUARIOS POR ROL → Para cargar colaboradores
-        // -----------------------------------------------------------
         public List<UsuarioModel> ObtenerUsuariosPorRol(int rol)
         {
             try
@@ -115,9 +112,6 @@ namespace GestionProyectos.Services
             }
         }
 
-        // -----------------------------------------------------------
-        // BUSCAR COLABORADORES POR FILTRO (documento, nombre, apellido)
-        // -----------------------------------------------------------
         public List<UsuarioModel> ObtenerColaboradores(string filtro)
         {
             try
@@ -131,10 +125,9 @@ namespace GestionProyectos.Services
             }
         }
 
-        // Obtener todos los colaboradores sin filtro
+
         public List<UsuarioModel> ObtenerColaboradores()
         {
-            // 4 = ROL COLABORADOR
             return ObtenerUsuariosPorRol(4);
         }
 

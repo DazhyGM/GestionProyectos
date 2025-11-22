@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- BARRA SUPERIOR -->
+
         <Border Grid.Row="0" Background="#2196F3" BorderBrush="#1976D2" BorderThickness="0,0,0,3">
             <Grid Margin="20,0">
                 <Grid.ColumnDefinitions>
@@ -22,7 +22,7 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Logo y Título -->
+
                 <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                     <Ellipse Width="40" Height="40" Fill="White" Margin="0,0,15,0"/>
                     <TextBlock Text="Gestión de Proyectos" 
@@ -32,10 +32,10 @@
                               VerticalAlignment="Center"/>
                 </StackPanel>
 
-                <!-- Botones usuario / cerrar sesión / proyectos inactivos -->
+
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
 
-                    <!-- Botón Proyectos Inactivos -->
+
                     <Button x:Name="btnProyectosInactivos"
                             Content="Proyectos Inactivos"
                             Background="#9C27B0"
@@ -69,7 +69,6 @@
                         </Button.Style>
                     </Button>
 
-                    <!-- Panel del usuario -->
                     <Border Background="White" CornerRadius="20" Padding="15,8" Margin="0,0,15,0">
                         <StackPanel Orientation="Horizontal">
                             <Ellipse Width="30" Height="30" Fill="#FF9800" Margin="0,0,10,0"/>
@@ -82,7 +81,7 @@
                         </StackPanel>
                     </Border>
 
-                    <!-- Botón Cerrar Sesión -->
+
                     <Button x:Name="btnCerrarSesion" 
                            Content="Cerrar Sesión" 
                            Background="#F44336" 
@@ -118,14 +117,14 @@
             </Grid>
         </Border>
 
-        <!-- CONTENIDO PRINCIPAL -->
+
         <Grid Grid.Row="1" Margin="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="350"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- PANEL NUEVO PROYECTO -->
+
             <Border Grid.Column="0" 
                    Background="White" 
                    CornerRadius="10" 
@@ -255,7 +254,7 @@
                 </StackPanel>
             </Border>
 
-            <!-- PANEL MIS PROYECTOS -->
+
             <Border Grid.Column="1" 
                    Background="White" 
                    CornerRadius="10" 
