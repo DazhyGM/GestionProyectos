@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2025 a las 00:42:00
+-- Tiempo de generación: 22-11-2025 a las 12:41:04
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `proyectos` (
   PRIMARY KEY (`id_proyecto`),
   KEY `id_estado` (`id_estado`),
   KEY `numero_documento` (`numero_documento`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `proyectos`
@@ -71,11 +71,40 @@ CREATE TABLE IF NOT EXISTS `proyectos` (
 
 INSERT INTO `proyectos` (`id_proyecto`, `nombre`, `descripcion`, `fecha_inicio`, `fecha_fin`, `id_estado`, `numero_documento`) VALUES
 (9, 'Proyecto X', 'Proyecto de fiestuki bien sabrosuki para un fincho bien buenuki', '2025-11-14', '2025-11-20', 3, 1000619691),
-(10, 'Proyecto Pasar Escritorios', 'Lograr pasar Desarrollo en ambientes de escritorios con este proyecto buenisimo', '2025-11-07', '2025-11-28', 3, 1000619691),
+(10, 'Proyecto Pasar Escritorios', 'Lograr pasar Desarrollo en ambientes de escritorios con este proyecto buenisimo', '2025-11-07', '2025-11-28', 2, 1000619691),
 (11, 'El proyecto', 'proyecto de prueba', '2025-11-07', '2025-11-08', 2, 111),
 (12, 'Proyecto Hackaton', 'Proyecto para la hackaton Uninpahu', '2025-11-19', '2025-11-20', 2, 1000619691),
 (13, 'Proyecto de prueba', 'Proyecto', '2025-11-20', '2025-11-20', 4, 1000619691),
-(14, 'asas', 'asas', '2025-11-21', '2025-11-22', 4, 1231231212);
+(14, 'asas', 'asas', '2025-11-21', '2025-11-22', 4, 1231231212),
+(15, 'prueba', 'aaa', '2025-11-22', '2025-11-27', 2, 1000619691);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proyectos_usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `proyectos_usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_proyecto` int(11) NOT NULL,
+  `numero_documento` int(11) NOT NULL,
+  `rol_en_proyecto` varchar(30) DEFAULT 'colaborador',
+  `fecha_asignacion` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `fk_proyecto` (`id_proyecto`),
+  KEY `fk_usuario` (`numero_documento`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `proyectos_usuarios`
+--
+
+INSERT INTO `proyectos_usuarios` (`id`, `id_proyecto`, `numero_documento`, `rol_en_proyecto`, `fecha_asignacion`) VALUES
+(1, 15, 111, 'colaborador', '2025-11-22 10:28:02'),
+(2, 11, 121135456, 'colaborador', '2025-11-22 11:03:57'),
+(3, 9, 1000619691, 'colaborador', '2025-11-22 11:26:46'),
+(4, 10, 1000619691, 'colaborador', '2025-11-22 11:27:07'),
+(5, 12, 1000619691, 'colaborador', '2025-11-22 11:31:20');
 
 -- --------------------------------------------------------
 
@@ -110,36 +139,38 @@ CREATE TABLE IF NOT EXISTS `tareas` (
   `id_tarea` int(11) NOT NULL AUTO_INCREMENT,
   `id_proyecto` int(11) NOT NULL,
   `nombre_tarea` varchar(100) NOT NULL,
-  `encargado` varchar(100) DEFAULT NULL,
   `completada` tinyint(1) DEFAULT 0,
+  `encargado_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_tarea`),
   KEY `id_proyecto` (`id_proyecto`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tareas`
 --
 
-INSERT INTO `tareas` (`id_tarea`, `id_proyecto`, `nombre_tarea`, `encargado`, `completada`) VALUES
-(1, 9, 'hacer un coctel', 'Kevin', 1),
-(2, 9, 'tomarse el coctel', 'Kevin', 1),
-(3, 10, 'hacer el proyecto', 'kevin', 1),
-(4, 10, 'hacer tareas', 'kevin', 1),
-(5, 9, 'sasas', 'kevin', 1),
-(6, 12, 'Elegir Reto de la Hackaton', 'Harold', 1),
-(7, 12, 'Verificar documentacion', 'Harold', 0),
-(8, 12, 'Elegir estructura del proyecto', 'Kevin', 0),
-(9, 12, 'Elegir lenguajes front y back', 'Kevin', 0),
-(10, 12, 'Realizar mockups o wireframes', 'Harold', 0),
-(11, 12, 'Realizar casos de uso', 'Harold', 0),
-(12, 12, 'Requisitos funcionales y no funcionales', 'Harold', 0),
-(13, 12, 'Pruebas de back en postman', 'Kevin', 0),
-(14, 10, 'Hacer el parcial', 'Kevin', 1),
-(15, 13, 'adsasa', 'kevin', 1),
-(16, 13, 'dsaasa', 'kevin', 0),
-(17, 14, 'asas', 'sasa', 1),
-(18, 14, 'ssss', 'sss', 0),
-(19, 14, 'asa', 'aaa', 0);
+INSERT INTO `tareas` (`id_tarea`, `id_proyecto`, `nombre_tarea`, `completada`, `encargado_id`) VALUES
+(1, 9, 'hacer un coctel', 1, 1000619691),
+(2, 9, 'tomarse el coctel', 1, 1000619691),
+(3, 10, 'hacer el proyecto', 1, 1000619691),
+(4, 10, 'hacer tareas', 1, 1000619691),
+(5, 9, 'sasas', 1, 1000619691),
+(6, 12, 'Elegir Reto de la Hackaton', 1, 1000619691),
+(7, 12, 'Verificar documentacion', 0, 1000619691),
+(8, 12, 'Elegir estructura del proyecto', 0, 1000619691),
+(9, 12, 'Elegir lenguajes front y back', 0, 1000619691),
+(10, 12, 'Realizar mockups o wireframes', 0, 1000619691),
+(11, 12, 'Realizar casos de uso', 0, 1000619691),
+(12, 12, 'Requisitos funcionales y no funcionales', 0, 1000619691),
+(13, 12, 'Pruebas de back en postman', 0, 1000619691),
+(14, 10, 'Hacer el parcial', 1, 1000619691),
+(20, 15, 'aaa', 1, 111),
+(21, 15, 'aa', 0, 1),
+(22, 11, 'nueva tarea', 1, 121135456),
+(23, 11, 'asa', 0, 111),
+(24, 10, 'asa', 0, 1000619691),
+(25, 10, 'aaa', 0, 1000619691),
+(26, 12, 'aaa', 1, 1000619691);
 
 -- --------------------------------------------------------
 
@@ -166,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 INSERT INTO `usuarios` (`numero_documento`, `nombre`, `apellido`, `correo`, `contrasena`, `telefono`, `rol`) VALUES
 (111, 'Dav', 'Sab', 'dav@gmail.com', '123', '123', 4),
 (121135456, 'Kevin', 'MocaCO', 'moc@gmail.com', '123', '3202455682', 4),
-(1000619691, 'Kevin', 'Sabogal', 'kevinsabogal24@gmail.com', '123', '123', 1),
+(1000619691, 'Kevin', 'Sabogal', 'kevinsabogal24@gmail.com', '123', '123', 4),
 (1111262797, 'vane', 'medina', 'medina@gmail.com', '123', '2345', 4),
 (1112111121, 'Manuel', 'Medrano', 'manu@gmail.com', '123', '123', 4),
 (1231231212, 'Prueba', 'De la prueba', 'prueba@gmail.com', '123', '3203202020', 4);
@@ -181,6 +212,13 @@ INSERT INTO `usuarios` (`numero_documento`, `nombre`, `apellido`, `correo`, `con
 ALTER TABLE `proyectos`
   ADD CONSTRAINT `proyectos_ibfk_1` FOREIGN KEY (`id_estado`) REFERENCES `estados_proyecto` (`id_estado`),
   ADD CONSTRAINT `proyectos_ibfk_2` FOREIGN KEY (`numero_documento`) REFERENCES `usuarios` (`numero_documento`);
+
+--
+-- Filtros para la tabla `proyectos_usuarios`
+--
+ALTER TABLE `proyectos_usuarios`
+  ADD CONSTRAINT `fk_proyecto` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_usuario` FOREIGN KEY (`numero_documento`) REFERENCES `usuarios` (`numero_documento`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `tareas`
