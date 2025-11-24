@@ -75,7 +75,7 @@ namespace GestionProyectos.Services
             return usuario != null && usuario.Contrasena == contrasena;
         }
 
-        public UsuarioModel ObtenerUsuarioPorCredenciales(string correo, string contrasena)
+        public UsuarioModel? ObtenerUsuarioPorCredenciales(string correo, string contrasena)
         {
             if (string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(contrasena))
                 return null;

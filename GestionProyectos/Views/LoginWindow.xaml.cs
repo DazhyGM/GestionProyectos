@@ -61,10 +61,10 @@ namespace GestionProyectos.Views
                     lblMensaje.Foreground = Brushes.Red;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                lblMensaje.Text = "Inicio de sesión exitoso";
-                lblMensaje.Foreground = Brushes.Blue;
+                lblMensaje.Text = "Error de conexión. Intente más tarde.";
+                lblMensaje.Foreground = Brushes.Red;
             }
 
 

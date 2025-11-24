@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Admin\Desktop\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\
 GestionProyectos
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\Admin\Desktop\GestionProyectos\GestionProyectos\App.xaml
-6125745955
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\App.xaml
+7-654765835
 
-211749541003
-206-1270477578
-Views\GestionTareasWindow.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\PrincipalWindow.xaml;Views\ProyectosInactivosWindow.xaml;Views\RegistroUsuarioWindow.xaml;
+26667058408
+221-1928676622
+Views\GestionTareasWindow.xaml;Views\Graficas.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\PrincipalWindow.xaml;Views\ProyectosInactivosWindow.xaml;Views\RegistroUsuarioWindow.xaml;
 
 False
 

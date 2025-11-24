@@ -29,6 +29,7 @@ namespace GestionProyectos.Views
         public ProyectosInactivosWindow(string nombreUsuario, int numeroDocumento)
         {
             InitializeComponent();
+            txtUsuarioNombre.Text = nombreUsuario;
             usuarioActual = nombreUsuario;
             numeroDocumentoUsuario = numeroDocumento;
             proyectoController = new ProyectoController();

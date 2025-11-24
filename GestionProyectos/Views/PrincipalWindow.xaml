@@ -6,7 +6,9 @@
         Width="1200"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
-        Background="#F5F5F5">
+        Background="#F5F5F5"
+        Loaded="Window_Loaded">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -22,19 +24,48 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-
                 <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                     <Ellipse Width="40" Height="40" Fill="White" Margin="0,0,15,0"/>
                     <TextBlock Text="Gestión de Proyectos" 
-                              FontSize="22" 
-                              FontWeight="Bold" 
-                              Foreground="White" 
-                              VerticalAlignment="Center"/>
+                                 FontSize="22" 
+                                 FontWeight="Bold" 
+                                 Foreground="White" 
+                                 VerticalAlignment="Center"/>
                 </StackPanel>
-
 
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
 
+                    <Button x:Name="btnGraficas"
+                            Content="Gráficas"
+                            Background="#CEFC86" 
+                            Foreground="#333"  FontWeight="SemiBold"
+                            Padding="20,10"
+                            Margin="0,0,15,0"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="BtnGraficas_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}"
+                                                    CornerRadius="5"
+                                                    Padding="{TemplateBinding Padding}">
+                                                <ContentPresenter HorizontalAlignment="Center" 
+                                                                VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#A8E670"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
 
                     <Button x:Name="btnProyectosInactivos"
                             Content="Proyectos Inactivos"
@@ -55,7 +86,7 @@
                                                     CornerRadius="5"
                                                     Padding="{TemplateBinding Padding}">
                                                 <ContentPresenter HorizontalAlignment="Center" 
-                                                                  VerticalAlignment="Center"/>
+                                                                VerticalAlignment="Center"/>
                                             </Border>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -73,24 +104,23 @@
                         <StackPanel Orientation="Horizontal">
                             <Ellipse Width="30" Height="30" Fill="#FF9800" Margin="0,0,10,0"/>
                             <TextBlock x:Name="txtUsuarioNombre" 
-                                       Text="Usuario" 
-                                       FontSize="14" 
-                                       FontWeight="SemiBold" 
-                                       Foreground="#333"
-                                       VerticalAlignment="Center"/>
+                                         Text="Usuario" 
+                                         FontSize="14" 
+                                         FontWeight="SemiBold" 
+                                         Foreground="#333"
+                                         VerticalAlignment="Center"/>
                         </StackPanel>
                     </Border>
 
-
                     <Button x:Name="btnCerrarSesion" 
-                           Content="Cerrar Sesión" 
-                           Background="#F44336" 
-                           Foreground="White"
-                           FontWeight="SemiBold"
-                           Padding="20,10"
-                           BorderThickness="0"
-                           Cursor="Hand"
-                           Click="BtnCerrarSesion_Click">
+                            Content="Cerrar Sesión" 
+                            Background="#F44336" 
+                            Foreground="White"
+                            FontWeight="SemiBold"
+                            Padding="20,10"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="BtnCerrarSesion_Click">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Template">
@@ -100,7 +130,7 @@
                                                     CornerRadius="5"
                                                     Padding="{TemplateBinding Padding}">
                                                 <ContentPresenter HorizontalAlignment="Center" 
-                                                                  VerticalAlignment="Center"/>
+                                                                VerticalAlignment="Center"/>
                                             </Border>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -117,7 +147,6 @@
             </Grid>
         </Border>
 
-
         <Grid Grid.Row="1" Margin="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="350"/>
@@ -126,69 +155,69 @@
 
 
             <Border Grid.Column="0" 
-                   Background="White" 
-                   CornerRadius="10" 
-                   Margin="0,0,10,0"
-                   Padding="20">
+                    Background="White" 
+                    CornerRadius="10" 
+                    Margin="0,0,10,0"
+                    Padding="20">
                 <Border.Effect>
                     <DropShadowEffect Color="Black" Opacity="0.1" BlurRadius="10" ShadowDepth="2"/>
                 </Border.Effect>
                 <StackPanel>
                     <TextBlock Text="Nuevo Proyecto" 
-                              FontSize="20" 
-                              FontWeight="Bold" 
-                              Foreground="#2196F3"
-                              Margin="0,0,0,20"/>
+                                 x:Name="TituloNuevoProyecto" FontSize="20" 
+                                 FontWeight="Bold" 
+                                 Foreground="#2196F3"
+                                 Margin="0,0,0,20"/>
                     <TextBlock Text="Nombre del Proyecto:" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtNombreProyecto" 
-                             Height="40" 
-                             FontSize="14" 
-                             Padding="10"
-                             BorderBrush="#DDD"
-                             Margin="0,0,0,15"/>
+                                 Height="40" 
+                                 FontSize="14" 
+                                 Padding="10"
+                                 BorderBrush="#DDD"
+                                 Margin="0,0,0,15"/>
                     <TextBlock Text="Descripción:" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtDescripcionProyecto" 
-                             Height="100" 
-                             FontSize="14" 
-                             Padding="10"
-                             BorderBrush="#DDD"
-                             TextWrapping="Wrap"
-                             AcceptsReturn="True"
-                             VerticalScrollBarVisibility="Auto"
-                             Margin="0,0,0,15"/>
+                                 Height="100" 
+                                 FontSize="14" 
+                                 Padding="10"
+                                 BorderBrush="#DDD"
+                                 TextWrapping="Wrap"
+                                 AcceptsReturn="True"
+                                 VerticalScrollBarVisibility="Auto"
+                                 Margin="0,0,0,15"/>
                     <TextBlock Text="Fecha de Inicio:" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <DatePicker x:Name="dpFechaInicio" 
-                                Height="40" 
-                                FontSize="14"
-                                BorderBrush="#DDD"
-                                Margin="0,0,0,15"/>
+                                 Height="40" 
+                                 FontSize="14"
+                                 BorderBrush="#DDD"
+                                 Margin="0,0,0,15"/>
                     <TextBlock Text="Fecha de Fin:" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <DatePicker x:Name="dpFechaFin" 
-                                Height="40" 
-                                FontSize="14"
-                                BorderBrush="#DDD"
-                                Margin="0,0,0,15"/>
+                                 Height="40" 
+                                 FontSize="14"
+                                 BorderBrush="#DDD"
+                                 Margin="0,0,0,15"/>
                     <TextBlock Text="Estado:" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <ComboBox x:Name="cmbEstado" 
-                              Height="40" 
-                              FontSize="14"
-                              BorderBrush="#DDD"
-                              Margin="0,0,0,20"/>
+                                 Height="40" 
+                                 FontSize="14"
+                                 BorderBrush="#DDD"
+                                 Margin="0,0,0,20"/>
                     <Label x:Name="lblMensaje" 
-                           Content="" 
-                           HorizontalAlignment="Center"
-                           FontWeight="SemiBold"
-                           Margin="0,0,0,10"/>
+                            Content="" 
+                            HorizontalAlignment="Center"
+                            FontWeight="SemiBold"
+                            Margin="0,0,0,10"/>
                     <Button x:Name="btnCrearProyecto" 
-                            Content="Crear Proyecto" 
-                            Height="45" 
-                            Background="#4CAF50" 
-                            Foreground="White"
-                            FontSize="16" 
-                            FontWeight="Bold"
-                            BorderThickness="0"
-                            Cursor="Hand"
-                            Click="BtnCrearProyecto_Click">
+                             Content="Crear Proyecto" 
+                             Height="45" 
+                             Background="#4CAF50" 
+                             Foreground="White"
+                             FontSize="16" 
+                             FontWeight="Bold"
+                             BorderThickness="0"
+                             Cursor="Hand"
+                             Click="BtnCrearProyecto_Click">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Template">
@@ -197,7 +226,7 @@
                                             <Border Background="{TemplateBinding Background}"
                                                     CornerRadius="5">
                                                 <ContentPresenter HorizontalAlignment="Center" 
-                                                                  VerticalAlignment="Center"/>
+                                                                VerticalAlignment="Center"/>
                                             </Border>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -211,16 +240,16 @@
                         </Button.Style>
                     </Button>
                     <Button x:Name="btnGuardarProyecto"
-                            Content="Guardar Cambios"
-                            Click="BtnGuardarProyecto_Click"
-                            Visibility="Collapsed"
-                            Margin="0,10,0,0"
-                            Background="#FF4CAF50"
-                            Foreground="White"
-                            FontWeight="Bold"
-                            Height="35"
-                            Width="150"
-                            HorizontalAlignment="Center">
+                             Content="Guardar Cambios"
+                             Click="BtnGuardarProyecto_Click"
+                             Visibility="Collapsed"
+                             Margin="0,10,0,0"
+                             Background="#FF4CAF50"
+                             Foreground="White"
+                             FontWeight="Bold"
+                             Height="35"
+                             Width="150"
+                             HorizontalAlignment="Center">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#FF4CAF50"/>
@@ -235,7 +264,7 @@
                                                     BorderBrush="{TemplateBinding BorderBrush}"
                                                     BorderThickness="0">
                                                 <ContentPresenter HorizontalAlignment="Center"
-                                                                  VerticalAlignment="Center"/>
+                                                                VerticalAlignment="Center"/>
                                             </Border>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsMouseOver" Value="True">
@@ -256,10 +285,10 @@
 
 
             <Border Grid.Column="1" 
-                   Background="White" 
-                   CornerRadius="10" 
-                   Margin="10,0,0,0"
-                   Padding="20">
+                    Background="White" 
+                    CornerRadius="10" 
+                    Margin="10,0,0,0"
+                    Padding="20">
                 <Border.Effect>
                     <DropShadowEffect Color="Black" Opacity="0.1" BlurRadius="10" ShadowDepth="2"/>
                 </Border.Effect>
@@ -272,11 +301,11 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Grid.Row="0"
-                               Text="Mis Proyectos" 
-                               FontSize="20" 
-                               FontWeight="Bold" 
-                               Foreground="#2196F3"
-                               Margin="0,0,0,15"/>
+                                 Text="Mis Proyectos" 
+                                 FontSize="20" 
+                                 FontWeight="Bold" 
+                                 Foreground="#2196F3"
+                                 Margin="0,0,0,15"/>
 
                     <Grid Grid.Row="1" Margin="0,0,0,20">
                         <Grid.ColumnDefinitions>
@@ -285,13 +314,13 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBox x:Name="txtBuscar" 
-                                 Grid.Column="0"
-                                 Height="40" 
-                                 FontSize="14" 
-                                 Padding="10"
-                                 BorderBrush="#DDD"
-                                 Margin="0,0,10,0"
-                                 TextChanged="TxtBuscar_TextChanged">
+                                     Grid.Column="0"
+                                     Height="40" 
+                                     FontSize="14" 
+                                     Padding="10"
+                                     BorderBrush="#DDD"
+                                     Margin="0,0,10,0"
+                                     TextChanged="TxtBuscar_TextChanged">
                             <TextBox.Style>
                                 <Style TargetType="TextBox">
                                     <Style.Triggers>
@@ -301,8 +330,8 @@
                                                     <VisualBrush Stretch="None" AlignmentX="Left">
                                                         <VisualBrush.Visual>
                                                             <TextBlock Text="Buscar proyectos..." 
-                                                                       Foreground="#999" 
-                                                                       Margin="10,0,0,0"/>
+                                                                         Foreground="#999" 
+                                                                         Margin="10,0,0,0"/>
                                                         </VisualBrush.Visual>
                                                     </VisualBrush>
                                                 </Setter.Value>
@@ -314,16 +343,16 @@
                         </TextBox>
 
                         <Button x:Name="btnActualizar" 
-                                Grid.Column="1"
-                                Content="Actualizar" 
-                                Height="40"
-                                Padding="20,0"
-                                Background="#2196F3" 
-                                Foreground="White"
-                                FontWeight="SemiBold"
-                                BorderThickness="0"
-                                Cursor="Hand"
-                                Click="BtnActualizar_Click">
+                                     Grid.Column="1"
+                                     Content="Actualizar" 
+                                     Height="40"
+                                     Padding="20,0"
+                                     Background="#2196F3" 
+                                     Foreground="White"
+                                     FontWeight="SemiBold"
+                                     BorderThickness="0"
+                                     Cursor="Hand"
+                                     Click="BtnActualizar_Click">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Template">
@@ -333,7 +362,7 @@
                                                         CornerRadius="5"
                                                         Padding="{TemplateBinding Padding}">
                                                     <ContentPresenter HorizontalAlignment="Center" 
-                                                                      VerticalAlignment="Center"/>
+                                                                    VerticalAlignment="Center"/>
                                                 </Border>
                                             </ControlTemplate>
                                         </Setter.Value>
@@ -389,14 +418,14 @@
 
                                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                                     <Button Content="Tareas" Background="#2196F3" Foreground="White" Padding="15,5" Margin="0,0,10,0"
-                                                            BorderThickness="0" Cursor="Hand" FontSize="12"
-                                                            Click="BtnTareas_Click" Tag="{Binding Id}"/>
+                                                             BorderThickness="0" Cursor="Hand" FontSize="12"
+                                                             Click="BtnTareas_Click" Tag="{Binding Id}"/>
                                                     <Button Content="Editar" Background="#FF9800" Foreground="White" Padding="15,5" Margin="0,0,10,0"
-                                                            BorderThickness="0" Cursor="Hand" FontSize="12"
-                                                            Click="BtnEditar_Click" Tag="{Binding Id}"/>
+                                                             BorderThickness="0" Cursor="Hand" FontSize="12"
+                                                             Click="BtnEditar_Click" Tag="{Binding Id}"/>
                                                     <Button Content="Eliminar" Background="#F44336" Foreground="White" Padding="15,5"
-                                                            BorderThickness="0" Cursor="Hand" FontSize="12"
-                                                            Click="BtnEliminar_Click" Tag="{Binding Id}"/>
+                                                             BorderThickness="0" Cursor="Hand" FontSize="12"
+                                                             Click="BtnEliminar_Click" Tag="{Binding Id}"/>
                                                 </StackPanel>
                                             </Grid>
 

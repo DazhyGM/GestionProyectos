@@ -16,7 +16,7 @@ namespace GestionProyectos.Models
         public string? Telefono { get; set; }
 
         public int Rol { get; set; } = 4;
-        public string NombreRol { get; set; }
+        public string? NombreRol { get; set; }
 
         public string NombreCompleto => $"{Nombre} {Apellido}";
 

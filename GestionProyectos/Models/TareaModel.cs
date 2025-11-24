@@ -15,6 +15,8 @@ namespace GestionProyectos.Models
 
         public int? EncargadoId { get; set; }
 
+        public string? EncargadoNombre { get; set; }
+
         public bool Completada { get; set; }
     }
 }

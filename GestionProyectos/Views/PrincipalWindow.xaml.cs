@@ -1,11 +1,13 @@
-﻿using GestionProyectos.Models;
-using GestionProyectos.Controllers;
+﻿using GestionProyectos.Controllers;
+using GestionProyectos.Models;
+using GestionProyectos.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Threading;
 
 namespace GestionProyectos.Views
 {
@@ -16,6 +18,7 @@ namespace GestionProyectos.Views
         private ProyectoModel proyectoEnEdicion = null;
         private List<ProyectoModel> proyectos = new List<ProyectoModel>();
         private readonly ProyectoController proyectoController = new ProyectoController();
+        private readonly DispatcherTimer mensajeTimer = new DispatcherTimer();
 
         public PrincipalWindow(string nombreUsuario, int numeroDocumento)
         {
@@ -27,6 +30,8 @@ namespace GestionProyectos.Views
 
             CargarEstados();
             CargarProyectos();
+            mensajeTimer.Interval = TimeSpan.FromSeconds(3);
+            mensajeTimer.Tick += MensajeTimer_Tick;
         }
 
         private void CargarEstados()
@@ -150,6 +155,7 @@ namespace GestionProyectos.Views
                     lblMensaje.Foreground = Brushes.Green;
                     LimpiarFormulario();
                     CargarProyectos();
+                    mensajeTimer.Start();
                 }
                 else
                 {
@@ -172,6 +178,12 @@ namespace GestionProyectos.Views
             dpFechaFin.SelectedDate = null;
             if (cmbEstado.Items.Count > 0)
                 cmbEstado.SelectedIndex = 0;
+
+            proyectoEnEdicion = null;
+            btnCrearProyecto.Visibility = Visibility.Visible; 
+            btnGuardarProyecto.Visibility = Visibility.Collapsed; 
+
+            ((TextBlock)this.FindName("TituloNuevoProyecto")).Text = "Nuevo Proyecto";
         }
 
 
@@ -236,7 +248,11 @@ namespace GestionProyectos.Views
                     }
 
                     btnGuardarProyecto.Visibility = Visibility.Visible;
-                    lblMensaje.Content = "Modo edición activo - realiza cambios y presiona Guardar";
+                    btnCrearProyecto.Visibility = Visibility.Collapsed;
+
+                    ((TextBlock)this.FindName("TituloNuevoProyecto")).Text = "Editar Proyecto";
+
+                    lblMensaje.Content = "Realiza cambios y presiona Guardar";
                     lblMensaje.Foreground = Brushes.Orange;
                 }
             }
@@ -279,8 +295,14 @@ namespace GestionProyectos.Views
                     lblMensaje.Foreground = Brushes.Green;
                     LimpiarFormulario();
                     proyectoEnEdicion = null;
+
                     btnGuardarProyecto.Visibility = Visibility.Collapsed;
+                    btnCrearProyecto.Visibility = Visibility.Visible;
+
+                    ((TextBlock)this.FindName("TituloNuevoProyecto")).Text = "Nuevo Proyecto";
+
                     CargarProyectos();
+                    mensajeTimer.Start();
                 }
                 else
                 {
@@ -416,5 +438,44 @@ namespace GestionProyectos.Views
             this.Close();
 
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            ProyectoService proyectoService = new ProyectoService();
+            EmailService emailService = new EmailService();
+
+            var proyectosPorVencer = proyectoService.ObtenerProyectosPorVencer();
+
+            if (proyectosPorVencer.Count > 0)
+            {
+                foreach (var proyecto in proyectosPorVencer)
+                {
+                    MessageBox.Show(
+                        $"El proyecto '{proyecto.Nombre}' vence mañana ({proyecto.FechaFin:dd/MM/yyyy})",
+                        "Aviso de Vencimiento",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Warning
+                    );
+
+                    emailService.EnviarCorreoAviso("gestionproyectos87@gmail.com", proyecto);
+                }
+            }
+        }
+
+        private void BtnGraficas_Click(object sender, RoutedEventArgs e)
+        {
+            Graficas grafic = new Graficas(usuarioActual, numeroDocumentoUsuario);
+            grafic.Show();
+            this.Close();
+
+        }
+
+        private void MensajeTimer_Tick(object sender, EventArgs e)
+        {
+            mensajeTimer.Stop();
+            lblMensaje.Content = "";
+            lblMensaje.Foreground = Brushes.Transparent;
+        }
+
     }
 }

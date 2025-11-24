@@ -13,43 +13,39 @@ namespace GestionProyectos.Models.Conex
     public class ConexionDB
     {
         string stringConex = "server= localhost; user=root; database=gestion_proyectos; password=; port=3306;";
-        public UsuarioModel GetUsuario(int documento)
+        public MySqlConnection GetConnection()
         {
-            UsuarioModel usuario = new UsuarioModel();
+            return new MySqlConnection(stringConex);
+        }
+        public UsuarioModel? GetUsuario(int documento)
+        {
+            UsuarioModel? usuario = null;
             string query = "SELECT * FROM usuarios WHERE numero_documento = @documento";
 
-
-            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            using (var conn = GetConnection())
+            using (var cmd = new MySqlCommand(query, conn))
             {
-                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                cmd.Parameters.AddWithValue("@documento", documento);
+                conn.Open();
+
+                using (var reader = cmd.ExecuteReader())
                 {
-                    command.Parameters.AddWithValue("@documento", documento);
-                    mySqlConnection.Open();
-                    using (MySqlDataReader reader = command.ExecuteReader())
-
+                    if (reader.Read())
                     {
-                        if (reader.Read())
+                        usuario = new UsuarioModel
                         {
-                            usuario.NumeroDocumento = reader.GetInt32("numero_documento");
-                            usuario.Nombre = reader.GetString("nombre");
-                            usuario.Apellido = reader.GetString("apellido");
-                            usuario.Correo = reader.GetString("correo");
-                            usuario.Contrasena = reader.GetString("contrasena");
-                            usuario.Telefono = reader.GetString("telefono");
-                            usuario.NombreRol = reader.GetString("nombre_rol");
-                        }
-                        else {
-                            usuario = null;
-
-                        }
+                            NumeroDocumento = reader.GetInt32("numero_documento"),
+                            Nombre = reader.GetString("nombre"),
+                            Apellido = reader.GetString("apellido"),
+                            Correo = reader.GetString("correo"),
+                            Contrasena = reader.GetString("contrasena"),
+                            Telefono = reader.GetString("telefono"),
+                            NombreRol = reader.GetString("nombre_rol")
+                        };
                     }
-
                 }
-           
-
-        }
+            }
             return usuario;
-
         }
         public Boolean AgregarUsuarios(UsuarioModel usuario)
         {
@@ -78,40 +74,35 @@ namespace GestionProyectos.Models.Conex
             }
             return false;
         }
-        
 
-        public UsuarioModel GetUsuarioCorreo(string correo)
+
+        public UsuarioModel? GetUsuarioCorreo(string correo)
         {
+            string query = "SELECT * FROM usuarios WHERE correo = @correo";
 
-         string query = "SELECT * FROM usuarios WHERE correo = @correo";
-
-         using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
             {
-             using(MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
                 {
                     command.Parameters.AddWithValue("@correo", correo);
                     mySqlConnection.Open();
                     using (MySqlDataReader reader = command.ExecuteReader())
-
                     {
                         if (reader.Read())
                         {
                             return new UsuarioModel
                             {
-                           
-                            NumeroDocumento = reader.GetInt32("numero_documento"),
-                            Nombre = reader.GetString("nombre"),
-                            Apellido = reader.GetString("apellido"),
-                            Correo = reader.GetString("correo"),
-                            Contrasena = reader.GetString("contrasena"),
-                            Telefono = reader.GetString("telefono"),
-                            Rol = reader.GetInt32("rol"),
+                                NumeroDocumento = reader.GetInt32("numero_documento"),
+                                Nombre = reader.GetString("nombre"),
+                                Apellido = reader.GetString("apellido"),
+                                Correo = reader.GetString("correo"),
+                                Contrasena = reader.GetString("contrasena"),
+                                Telefono = reader.GetString("telefono"),
+                                Rol = reader.GetInt32("rol"),
                             };
-                           
                         }
                     }
                 }
-
             }
             return null;
         }
@@ -432,9 +423,13 @@ namespace GestionProyectos.Models.Conex
         public List<TareaModel> ObtenerTareas(int idProyecto)
         {
             List<TareaModel> tareas = new List<TareaModel>();
-            string query = @"SELECT id_tarea, id_proyecto, nombre_tarea, encargado_id, completada
-                     FROM tareas 
-                     WHERE id_proyecto = @idProyecto";
+            string query = @"
+                SELECT t.id_tarea, t.id_proyecto, t.nombre_tarea, t.encargado_id, t.completada,
+                    u.nombre AS encargado_nombre, u.apellido AS encargado_apellido 
+                FROM tareas t
+                LEFT JOIN usuarios u ON t.encargado_id = u.numero_documento
+                WHERE t.id_proyecto = @idProyecto
+                ORDER BY t.id_tarea DESC"; 
 
             using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
             {
@@ -447,12 +442,17 @@ namespace GestionProyectos.Models.Conex
                     {
                         while (reader.Read())
                         {
+                            string nombre = reader.IsDBNull(reader.GetOrdinal("encargado_nombre")) ? "" : reader.GetString("encargado_nombre");
+                            string apellido = reader.IsDBNull(reader.GetOrdinal("encargado_apellido")) ? "" : reader.GetString("encargado_apellido");
+
                             tareas.Add(new TareaModel
                             {
                                 IdTarea = reader.GetInt32("id_tarea"),
                                 IdProyecto = reader.GetInt32("id_proyecto"),
                                 NombreTarea = reader.GetString("nombre_tarea"),
                                 EncargadoId = reader.GetInt32("encargado_id"),
+                                EncargadoNombre = $"{nombre} {apellido}".Trim(),
+
                                 Completada = reader.GetBoolean("completada")
                             });
                         }
@@ -650,6 +650,132 @@ namespace GestionProyectos.Models.Conex
             return lista;
         }
 
+        public List<GraficasModel> ObtenerProyectosEstado()
+        {
+            List<GraficasModel> estados = new List<GraficasModel>();
+            string query = @"SELECT e.nombre_estado, COUNT(p.id_proyecto) AS cantidad
+                     FROM estados_proyecto e 
+                     LEFT JOIN proyectos p ON p.id_estado = e.id_estado
+                     GROUP BY e.nombre_estado
+                     ORDER BY e.nombre_estado;";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    mySqlConnection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            estados.Add(new GraficasModel
+                            {
+                                Cantidad = reader.GetInt32("cantidad"),
+                                NombreEstado = reader.GetString("nombre_estado")
+                            });
+                        }
+                    }
+                }
+            }
+
+            return estados;
+        }
+
+        public List<GraficasModel> ObtenerCantidadTareasPorEncargado(int numeroDocumento)
+        {
+            List<GraficasModel> resultados = new List<GraficasModel>();
+            string query = @"SELECT u.numero_documento AS encargado_id, 
+                            u.nombre, 
+                            IFNULL(COUNT(t.id_tarea), 0) AS cantidad 
+                     FROM usuarios u
+                     LEFT JOIN tareas t ON t.encargado_id = u.numero_documento
+                     WHERE u.numero_documento = @EncargadoId  -- FILTRAR POR USUARIO SELECCIONADO
+                     GROUP BY u.numero_documento, u.nombre
+                     ORDER BY u.nombre";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    command.Parameters.AddWithValue("@EncargadoId", numeroDocumento);
+                    mySqlConnection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            resultados.Add(new GraficasModel
+                            {
+                                Cantidad = reader.GetInt32("cantidad"),
+                                EncargadoId = reader.GetInt32("encargado_id"),
+                                Nombre = reader.GetString("nombre")
+                            });
+                        }
+                    }
+                }
+            }
+            return resultados;
+        }
+
+        public List<GraficasModel> ObtenerEncargados()
+        {
+            List<GraficasModel> encargados = new List<GraficasModel>();
+            string query = @"SELECT u.numero_documento, u.nombre 
+                     FROM usuarios u 
+                     ORDER BY u.nombre;";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    mySqlConnection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            encargados.Add(new GraficasModel
+                            {
+                                NumeroDocumento = reader.GetInt32("numero_documento"),
+                                Nombre = reader.GetString("nombre")
+                            });
+                        }
+                    }
+                }
+            }
+            return encargados;
+        }
+
+
+        public List<GraficasModel> ObtenerProyectosporUsuario()
+        {
+            List<GraficasModel> resultados = new List<GraficasModel>();
+            string query = @"SELECT u.numero_documento, u.nombre, COUNT(p.id_proyecto) AS cantidad
+                     FROM usuarios u
+                     LEFT JOIN proyectos p ON p.numero_documento = u.numero_documento
+                     GROUP BY u.numero_documento, u.nombre
+                     ORDER BY u.nombre;";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(stringConex))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, mySqlConnection))
+                {
+                    mySqlConnection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            resultados.Add(new GraficasModel
+                            {
+                                NumeroDocumento = reader.GetInt32("numero_documento"),
+                                Nombre = reader.GetString("nombre"),
+                                Cantidad = reader.GetInt32("cantidad")
+                            });
+                        }
+                    }
+                }
+            }
+
+            return resultados;
+        }
 
     }
 

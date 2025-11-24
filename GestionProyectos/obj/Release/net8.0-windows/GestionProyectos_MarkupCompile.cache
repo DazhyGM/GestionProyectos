@@ -1,0 +1,20 @@
+﻿GestionProyectos
+
+
+winexe
+C#
+.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Release\net8.0-windows\
+GestionProyectos
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\App.xaml
+6125745955
+
+21104445262
+206881997692
+Views\GestionTareasWindow.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\PrincipalWindow.xaml;Views\ProyectosInactivosWindow.xaml;Views\RegistroUsuarioWindow.xaml;
+
+True
+

@@ -168,3 +168,115 @@ C:\Users\Admin\Desktop\GestionProyectos\GestionProyectos\obj\Debug\net8.0-window
 C:\Users\Admin\Desktop\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\GestionTareasWindow.g.cs
 C:\Users\Admin\Desktop\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\ProyectosInactivosWindow.baml
 C:\Users\Admin\Desktop\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\ProyectosInactivosWindow.g.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.exe
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.deps.json
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.runtimeconfig.json
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.pdb
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\GestionTareasWindow.baml
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\PrincipalWindow.baml
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\ProyectosInactivosWindow.baml
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\RegistroUsuarioWindow.baml
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\GestionTareasWindow.g.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\PrincipalWindow.g.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\ProyectosInactivosWindow.g.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\RegistroUsuarioWindow.g.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos_MarkupCompile.cache
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos_MarkupCompile.lref
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\LoginWindow.baml
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.g.resources
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.sourcelink.json
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionP.D4E3B4A3.Up2Date
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\refint\GestionProyectos.dll
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.pdb
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.genruntimeconfig.cache
+C:\Users\Usuario\OneDrive - Fundación Universitaria para el Desarrollo Humano - UNINPAHU\Escritorio\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\ref\GestionProyectos.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.exe
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.deps.json
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.runtimeconfig.json
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\GestionProyectos.pdb
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\GestionTareasWindow.baml
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\PrincipalWindow.baml
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\ProyectosInactivosWindow.baml
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\RegistroUsuarioWindow.baml
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\GestionTareasWindow.g.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\PrincipalWindow.g.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\ProyectosInactivosWindow.g.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\RegistroUsuarioWindow.g.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos_MarkupCompile.cache
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos_MarkupCompile.lref
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\LoginWindow.baml
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.g.resources
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.AssemblyInfo.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.sourcelink.json
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionP.D4E3B4A3.Up2Date
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\refint\GestionProyectos.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.pdb
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\GestionProyectos.genruntimeconfig.cache
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\ref\GestionProyectos.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\Graficas.baml
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\obj\Debug\net8.0-windows\Views\Graficas.g.cs
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\EPPlus.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\itextsharp.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\OxyPlot.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\OxyPlot.Wpf.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\OxyPlot.Wpf.Shared.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\System.Security.Cryptography.Xml.dll
+C:\Users\Admin\Documents\GestionProyectos\GestionProyectos\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

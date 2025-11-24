@@ -179,7 +179,6 @@ namespace GestionProyectos.Views
                 if (lstColaboradores.SelectedItem is UsuarioModel seleccionado)
                 {
                     txtDocumentoEncargado.Text = seleccionado.NumeroDocumento?.ToString() ?? "";
-                    txtNombreEncargado.Text = seleccionado.NombreCompleto;
                     lstColaboradores.Visibility = Visibility.Collapsed;
                 }
             }
@@ -296,7 +295,6 @@ namespace GestionProyectos.Views
         {
             txtNombreTarea.Text = "";
             txtDocumentoEncargado.Text = "";
-            txtNombreEncargado.Text = "";
         }
     }
 }
