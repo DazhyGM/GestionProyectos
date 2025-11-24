@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OP8pDgItpPA=",
+  "dgSpecHash": "fk1B/02MKu8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Documents\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\epplus\\8.3.0\\epplus.8.3.0.nupkg.sha512",
@@ -42,9 +42,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "El paquete \"iTextSharp 5.5.13.4\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "projectPath": "C:\\Users\\Admin\\Documents\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Admin\\Documents\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
+      "filePath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\GestionProyectos.csproj",
       "libraryId": "iTextSharp",
       "targetGraphs": [
         "net8.0-windows7.0"

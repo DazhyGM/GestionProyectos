@@ -40,22 +40,26 @@
                     <StackPanel Grid.Column="1" Margin="10,0">
                         <TextBlock Text="Encargado del Proyecto" FontWeight="Bold"/>
 
-                        <TextBox x:Name="txtDocumentoEncargado"
-                                 Width="250"
-                                 Margin="0 5 0 0"
-                                 HorizontalAlignment="Left"
-                                 TextChanged="txtDocumentoEncargado_TextChanged"/>
+                        <Grid Margin="0 5 0 0">
 
-                        <ListBox x:Name="lstColaboradores"
-                                 Visibility="Collapsed"
-                                 Height="120"
-                                 SelectionChanged="lstColaboradores_SelectionChanged"
-                                 DisplayMemberPath="NombreCompleto"/>
+                            <TextBox x:Name="txtDocumentoEncargado"
+                                Padding="5" 
+                                HorizontalAlignment="Stretch"
+                                TextChanged="txtDocumentoEncargado_TextChanged"
+                                 Background="White" BorderBrush="#B0B0B0" BorderThickness="1" VerticalContentAlignment="Center"/>
+                            <TextBlock x:Name="PlaceholderEncargado"
+                                Text="Ingrese el documento del encargado de la tarea"
+                                Foreground="Gray"
+                                IsHitTestVisible="False"
+                                VerticalAlignment="Center"   
+                                Margin="10,0,0,0"   Visibility="Visible"/>
 
-                        
+                        </Grid>
+
+                        <ListBox x:Name="lstColaboradores"/>
                     </StackPanel>
 
-                    <Button Grid.Column="2" Content="Agregar" Width="80" Height="30" 
+                            <Button Grid.Column="2" Content="Agregar" Width="80" Height="30" 
                             VerticalAlignment="Bottom"
                             Background="#4CAF50" Foreground="White" FontWeight="Bold" 
                             BorderThickness="0"

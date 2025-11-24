@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\views\\gestiontareaswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\gestiontareaswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|c:\\users\\admin\\desktop\\gestionproyectos\\gestionproyectos\\views\\gestiontareaswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FFBAADE-F9F8-4A7E-9111-CB6C9AFBFF35}|GestionProyectos\\GestionProyectos.csproj|solutionrelative:gestionproyectos\\views\\gestiontareaswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 47,
           "Children": [
             {
               "$type": "Bookmark",
@@ -194,6 +203,31 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GestionTareasWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Views\\GestionTareasWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\GestionTareasWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Views\\GestionTareasWindow.xaml.cs",
+              "RelativeToolTip": "GestionProyectos\\Views\\GestionTareasWindow.xaml.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAmwJkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T06:35:32.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GestionTareasWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Views\\GestionTareasWindow.xaml",
+              "RelativeDocumentMoniker": "GestionProyectos\\Views\\GestionTareasWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GestionProyectos\\GestionProyectos\\Views\\GestionTareasWindow.xaml",
+              "RelativeToolTip": "GestionProyectos\\Views\\GestionTareasWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T06:33:41.521Z",
+              "EditorCaption": ""
             }
           ]
         },

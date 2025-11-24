@@ -142,6 +142,8 @@ namespace GestionProyectos.Views
             try
             {
                 string texto = txtDocumentoEncargado.Text.Trim().ToLower();
+                PlaceholderEncargado.Visibility =
+                string.IsNullOrWhiteSpace(texto) ? Visibility.Visible : Visibility.Collapsed;
 
                 if (string.IsNullOrWhiteSpace(texto))
                 {
